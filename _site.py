@@ -4,7 +4,9 @@ Change BASE_URL here (e.g. when a real domain is bought), run `python build.py`,
 and every canonical, og:url, schema id, sitemap entry and robots.txt updates.
 """
 
-BASE_URL = "https://islamabadcleaners.com"  # no trailing slash
+# The host that actually serves the site. Non-www 308-redirects to www on
+# Vercel, so canonicals must point at www or every canonical is a redirect.
+BASE_URL = "https://www.islamabadcleaners.com"  # no trailing slash
 
 BRAND = "IslamabadCleaners"
 PHONE_DISPLAY = "0330 2935777"

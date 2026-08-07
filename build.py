@@ -95,9 +95,24 @@ NAV_JS = """<script>
 </script>"""
 
 
-def head(p, title, meta, path, og_image, schema=None):
-    """p = relative prefix ('' or '../'); path = canonical path e.g. 'services/x.html'."""
-    canonical = f"{S.BASE_URL}/{path}" if path else f"{S.BASE_URL}/"
+def url(path=""):
+    """Site-absolute href for a clean path ('' -> '/', 'services' -> '/services')."""
+    return f"/{path}" if path else "/"
+
+
+def canonical_url(path=""):
+    """Absolute canonical for a clean path ('' -> BASE_URL + '/')."""
+    return f"{S.BASE_URL}/{path}" if path else f"{S.BASE_URL}/"
+
+
+def out_file(path=""):
+    """Where a clean path is written on disk ('services' -> 'services/index.html')."""
+    return f"{path}/index.html" if path else "index.html"
+
+
+def head(title, meta, path, og_image, schema=None):
+    """path = clean canonical path, e.g. '' | 'services' | 'services/sofa-cleaning'."""
+    canonical = canonical_url(path)
     og_img_url = f"{S.BASE_URL}/{og_image}"
     schema_tag = ""
     if schema:
@@ -126,31 +141,31 @@ def head(p, title, meta, path, og_image, schema=None):
 <meta name="twitter:description" content="{meta}">
 <meta name="twitter:image" content="{og_img_url}">
 <meta name="theme-color" content="#0A2126">
-<link rel="icon" href="{p}favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="{p}apple-touch-icon.png">
-<link rel="preload" href="{p}fonts/fraunces-v38-latin-600.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{p}fonts/figtree-v9-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{p}css/main.css">{schema_tag}
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/fraunces-v38-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/figtree-v9-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/main.css">{schema_tag}
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 """
 
 
-def nav(p, current=""):
+def nav(current=""):
     def cur(k):
         return ' aria-current="page"' if current == k else ""
     return f"""<header class="site-header">
 <div class="wrap nav">
-<a class="brand" href="{p}index.html"><img src="{p}images/bubbles.png" alt="" width="34" height="34">{S.BRAND}</a>
+<a class="brand" href="/"><img src="/images/bubbles.png" alt="" width="34" height="34">{S.BRAND}</a>
 <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
 </button>
 <ul class="nav-links">
-<li><a href="{p}index.html"{cur('home')}>Home</a></li>
-<li><a href="{p}services.html"{cur('services')}>Services</a></li>
-<li><a href="{p}about.html"{cur('about')}>About</a></li>
-<li><a href="{p}contact.html"{cur('contact')}>Contact</a></li>
+<li><a href="/"{cur('home')}>Home</a></li>
+<li><a href="/services"{cur('services')}>Services</a></li>
+<li><a href="/about"{cur('about')}>About</a></li>
+<li><a href="/contact"{cur('contact')}>Contact</a></li>
 <li><a class="nav-phone" href="tel:{S.PHONE_TEL}">{S.PHONE_DISPLAY}</a></li>
 <li class="nav-cta"><a class="btn btn-wa" href="{WA_GENERIC_URL}" target="_blank" rel="noopener">{icon('wa', 18)} Get a free quote</a></li>
 </ul>
@@ -159,17 +174,17 @@ def nav(p, current=""):
 """
 
 
-def footer(p):
+def footer():
     half = (len(SERVICES) + 1) // 2
     col1 = "\n".join(
-        f'<li><a href="{p}services/{s["slug"]}.html">{s["name"]}</a></li>' for s in SERVICES[:half])
+        f'<li><a href="/services/{s["slug"]}">{s["name"]}</a></li>' for s in SERVICES[:half])
     col2 = "\n".join(
-        f'<li><a href="{p}services/{s["slug"]}.html">{s["name"]}</a></li>' for s in SERVICES[half:])
+        f'<li><a href="/services/{s["slug"]}">{s["name"]}</a></li>' for s in SERVICES[half:])
     return f"""<footer class="site-footer">
 <div class="wrap">
 <div class="footer-grid">
 <div>
-<p class="footer-brand"><img src="{p}images/bubbles.png" alt="" width="30" height="30">{S.BRAND}</p>
+<p class="footer-brand"><img src="/images/bubbles.png" alt="" width="30" height="30">{S.BRAND}</p>
 <p>Professional cleaning services across Islamabad &amp; Rawalpindi. Fixed written quotes on WhatsApp, available 24/7.</p>
 <ul class="footer-contact" style="margin-top:16px">
 <li>{icon('phone', 16)}<a href="tel:{S.PHONE_TEL}">{S.PHONE_DISPLAY}</a></li>
@@ -182,10 +197,10 @@ def footer(p):
 <div><p class="footer-title">Services</p><ul>{col1}</ul></div>
 <div><p class="footer-title">More services</p><ul>{col2}</ul></div>
 <div><p class="footer-title">Company</p><ul>
-<li><a href="{p}index.html">Home</a></li>
-<li><a href="{p}services.html">All services</a></li>
-<li><a href="{p}about.html">About us</a></li>
-<li><a href="{p}contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/services">All services</a></li>
+<li><a href="/about">About us</a></li>
+<li><a href="/contact">Contact</a></li>
 </ul></div>
 </div>
 <div class="footer-bottom">
@@ -206,7 +221,7 @@ def float_ctas(wa_link_url):
 """
 
 
-def close(p, wa_link_url):
+def close(wa_link_url):
     return float_ctas(wa_link_url) + NAV_JS + "\n</body>\n</html>\n"
 
 
@@ -260,9 +275,9 @@ def crumbs_node(items):
 
 
 # ------------------------------------------------------- page sections -----
-def service_card(p, s):
-    return f"""<a class="card" href="{p}services/{s['slug']}.html">
-<img src="{p}images/services/{s['slug']}-card.webp" alt="{s['name']} in Islamabad and Rawalpindi" width="480" height="320" loading="lazy" decoding="async">
+def service_card(s):
+    return f"""<a class="card" href="/services/{s['slug']}">
+<img src="/images/services/{s['slug']}-card.webp" alt="{s['name']} in Islamabad and Rawalpindi" width="480" height="320" loading="lazy" decoding="async">
 <div class="card-body">
 <h3>{s['name']}</h3>
 <p>{s['card']}</p>
@@ -345,9 +360,8 @@ def promise_section():
 
 # ---------------------------------------------------------------- pages ----
 def build_home():
-    p = ""
     featured = [BY_SLUG[slug] for slug in S.HOME_FEATURED]
-    cards = "\n".join(service_card(p, s) for s in featured)
+    cards = "\n".join(service_card(s) for s in featured)
     steps = "\n".join(f"<li><h3>{t}</h3><p>{d}</p></li>" for t, d in S.STEPS)
     faqs_html = "\n".join(
         f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in C.FAQS)
@@ -364,8 +378,8 @@ def build_home():
     meta = ("Professional cleaning services in Islamabad & Rawalpindi — deep cleaning, "
             "sofa, carpet, water tank, solar panels & more. Open 24/7. WhatsApp 0330 2935777.")
 
-    html = head(p, title, meta, "", "images/og/default.jpg", schema)
-    html += nav(p, "home")
+    html = head(title, meta, "", "images/og/default.jpg", schema)
+    html += nav("home")
     html += f"""<main id="main">
 <section class="hero on-ink">
 <div class="wrap">
@@ -385,7 +399,7 @@ def build_home():
 </ul>
 </div>
 <figure class="arch">
-<img src="images/hero-crew.webp" alt="IslamabadCleaners cleaners vacuuming and mopping a living room in Islamabad" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="/images/hero-crew.webp" alt="IslamabadCleaners cleaners vacuuming and mopping a living room in Islamabad" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -398,7 +412,7 @@ def build_home():
 <p>From a single sofa to a full post-construction handover &mdash; each service has its own machines, method and page.</p>
 </div>
 <div class="card-grid">{cards}</div>
-<p class="grid-foot"><a class="btn btn-ink" href="services.html">See all {len(SERVICES)} services</a></p>
+<p class="grid-foot"><a class="btn btn-ink" href="/services">See all {len(SERVICES)} services</a></p>
 </div>
 </section>
 
@@ -433,28 +447,27 @@ def build_home():
           WA_GENERIC_URL)}
 </main>
 """
-    html += footer(p) + close(p, WA_GENERIC_URL)
-    write("index.html", html)
+    html += footer() + close(WA_GENERIC_URL)
+    write(out_file(""), html)
 
 
 def build_services_index():
-    p = ""
-    cards = "\n".join(service_card(p, s) for s in SERVICES)
+    cards = "\n".join(service_card(s) for s in SERVICES)
     schema = {"@context": "https://schema.org", "@graph": [
         org_node(),
-        crumbs_node([("Home", f"{S.BASE_URL}/"),
-                     ("Services", f"{S.BASE_URL}/services.html")]),
+        crumbs_node([("Home", canonical_url()),
+                     ("Services", canonical_url("services"))]),
     ]}
     title = "All Cleaning Services in Islamabad & Rawalpindi | IslamabadCleaners"
     meta = (f"All {len(SERVICES)} IslamabadCleaners services across Islamabad & Rawalpindi — from "
             "sofa and carpet to water tanks and solar panels. WhatsApp 0330 2935777.")
-    html = head(p, title, meta, "services.html", "images/og/default.jpg", schema)
-    html += nav(p, "services")
+    html = head(title, meta, "services", "images/og/default.jpg", schema)
+    html += nav("services")
     html += f"""<main id="main">
 <section class="page-hero on-ink">
 <div class="wrap">
 <div>
-<ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Services</li></ol>
+<ol class="crumbs"><li><a href="/">Home</a></li><li aria-current="page">Services</li></ol>
 <h1>Every cleaning service we offer</h1>
 <p class="lead">{len(SERVICES)} services, one standard: a fixed written quote on WhatsApp, one price, and a walkthrough before we leave.</p>
 <div class="cta-row">
@@ -463,7 +476,7 @@ def build_services_index():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="images/about-team.webp" alt="IslamabadCleaners professional cleaning team at work" width="720" height="720" loading="lazy" decoding="async">
+<img src="/images/about-team.webp" alt="IslamabadCleaners professional cleaning team at work" width="720" height="720" loading="lazy" decoding="async">
 </figure>
 </div>
 </section>
@@ -482,18 +495,17 @@ def build_services_index():
           WA_GENERIC_URL)}
 </main>
 """
-    html += footer(p) + close(p, WA_GENERIC_URL)
-    write("services.html", html)
+    html += footer() + close(WA_GENERIC_URL)
+    write(out_file("services"), html)
 
 
 def build_service_page(slug):
     s = BY_SLUG[slug]
     d = dict(PAGES[slug])
     d["meta"] = META.get(slug, d["meta"])
-    p = "../"
     wa_link_url = wa_for(s["name"])
-    path = f"services/{slug}.html"
-    canonical = f"{S.BASE_URL}/{path}"
+    path = f"services/{slug}"
+    canonical = canonical_url(path)
 
     intro = "\n".join(f"<p>{para}</p>" for para in d["intro"])
     included = "\n".join(f"<li>{icon('check', 18)}<span>{i}</span></li>" for i in d["included"])
@@ -504,7 +516,7 @@ def build_service_page(slug):
                           for q, a in d["faqs"])
     areas = "\n".join(f"<li>{a}</li>" for a in AREAS_ISB + AREAS_RWP)
     closing = "\n".join(f"<p>{para}</p>" for para in d["closing"])
-    rel_cards = "\n".join(service_card(p, r) for r in related(slug))
+    rel_cards = "\n".join(service_card(r) for r in related(slug))
 
     schema = {"@context": "https://schema.org", "@graph": [
         org_node(),
@@ -514,22 +526,22 @@ def build_service_page(slug):
          "provider": {"@id": f"{S.BASE_URL}/#organization"},
          "areaServed": [{"@type": "City", "name": "Islamabad"},
                         {"@type": "City", "name": "Rawalpindi"}]},
-        crumbs_node([("Home", f"{S.BASE_URL}/"),
-                     ("Services", f"{S.BASE_URL}/services.html"),
+        crumbs_node([("Home", canonical_url()),
+                     ("Services", canonical_url("services")),
                      (s["name"], canonical)]),
         faq_nodes(d["faqs"]),
     ]}
 
     title = f"{s['name']} in Islamabad & Rawalpindi | IslamabadCleaners"
-    html = head(p, title, d["meta"], path, f"images/og/{slug}.jpg", schema)
-    html += nav(p, "services")
+    html = head(title, d["meta"], path, f"images/og/{slug}.jpg", schema)
+    html += nav("services")
     html += f"""<main id="main">
 <section class="page-hero on-ink">
 <div class="wrap">
 <div>
 <ol class="crumbs">
-<li><a href="{p}index.html">Home</a></li>
-<li><a href="{p}services.html">Services</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/services">Services</a></li>
 <li aria-current="page">{s['name']}</li>
 </ol>
 <h1>{d['h1']}</h1>
@@ -541,7 +553,7 @@ def build_service_page(slug):
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="{p}images/services/{slug}-hero.webp" alt="{s['name']} in Islamabad and Rawalpindi" width="720" height="720" fetchpriority="high" decoding="async">
+<img src="/images/services/{slug}-hero.webp" alt="{s['name']} in Islamabad and Rawalpindi" width="720" height="720" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -599,31 +611,30 @@ def build_service_page(slug):
 </section>
 </main>
 """
-    html += footer(p) + close(p, wa_link_url)
-    write(path, html)
+    html += footer() + close(wa_link_url)
+    write(out_file(path), html)
 
 
 def build_about():
-    p = ""
     body = "\n".join(f"<p>{para}</p>" for para in C.ABOUT_BODY)
     features = "\n".join(
         f"""<div class="promise-card">{icon('check', 26)}<h3>{t}</h3><p>{d}</p></div>"""
         for t, d in C.FEATURES)
     schema = {"@context": "https://schema.org", "@graph": [
         org_node(),
-        crumbs_node([("Home", f"{S.BASE_URL}/"),
-                     ("About", f"{S.BASE_URL}/about.html")]),
+        crumbs_node([("Home", canonical_url()),
+                     ("About", canonical_url("about"))]),
     ]}
     title = "About IslamabadCleaners | Cleaning Company in Islamabad & Rawalpindi"
     meta = ("IslamabadCleaners is a cleaning company serving Islamabad & Rawalpindi 24/7 — own "
             "equipment, fixed written quotes on WhatsApp. 0330 2935777.")
-    html = head(p, title, meta, "about.html", "images/og/default.jpg", schema)
-    html += nav(p, "about")
+    html = head(title, meta, "about", "images/og/default.jpg", schema)
+    html += nav("about")
     html += f"""<main id="main">
 <section class="page-hero on-ink">
 <div class="wrap">
 <div>
-<ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">About</li></ol>
+<ol class="crumbs"><li><a href="/">Home</a></li><li aria-current="page">About</li></ol>
 <h1>A cleaning company that quotes honestly and shows up</h1>
 <p class="lead">Based in Islamabad, working across both twin cities &mdash; one-off deep cleans, furniture and floors, and regular contracts for offices and clinics.</p>
 <div class="cta-row">
@@ -632,7 +643,7 @@ def build_about():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="images/about-team.webp" alt="IslamabadCleaners cleaning team with professional equipment" width="720" height="720" fetchpriority="high" decoding="async">
+<img src="/images/about-team.webp" alt="IslamabadCleaners cleaning team with professional equipment" width="720" height="720" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -669,30 +680,29 @@ def build_about():
 {cta_band("Ready when you are", "Message us the job — we'll take it from there.", WA_GENERIC_URL)}
 </main>
 """
-    html += footer(p) + close(p, WA_GENERIC_URL)
-    write("about.html", html)
+    html += footer() + close(WA_GENERIC_URL)
+    write(out_file("about"), html)
 
 
 def build_contact():
-    p = ""
     faqs = C.FAQS[:5]
     faqs_html = "\n".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faqs)
     schema = {"@context": "https://schema.org", "@graph": [
         org_node(),
-        crumbs_node([("Home", f"{S.BASE_URL}/"),
-                     ("Contact", f"{S.BASE_URL}/contact.html")]),
+        crumbs_node([("Home", canonical_url()),
+                     ("Contact", canonical_url("contact"))]),
         faq_nodes(faqs),
     ]}
     title = "Contact IslamabadCleaners | WhatsApp 0330 2935777 | Islamabad & Rawalpindi"
     meta = ("Contact IslamabadCleaners for cleaning in Islamabad and Rawalpindi. WhatsApp or "
             "call 0330 2935777 — replies in minutes, fixed quotes on WhatsApp, open 24/7.")
-    html = head(p, title, meta, "contact.html", "images/og/default.jpg", schema)
-    html += nav(p, "contact")
+    html = head(title, meta, "contact", "images/og/default.jpg", schema)
+    html += nav("contact")
     html += f"""<main id="main">
 <section class="page-hero on-ink">
 <div class="wrap">
 <div>
-<ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol>
+<ol class="crumbs"><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol>
 <h1>Message us &mdash; we reply in minutes</h1>
 <p class="lead">WhatsApp is fastest. Tell us the service you need, your area, and roughly how big the job is. We are open 24 hours, every day.</p>
 <div class="cta-row">
@@ -702,7 +712,7 @@ def build_contact():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="images/hero-home.webp" alt="IslamabadCleaners technician cleaning a sofa" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="/images/hero-home.webp" alt="IslamabadCleaners technician cleaning a sofa" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -734,42 +744,66 @@ def build_contact():
 {areas_section()}
 </main>
 """
-    html += footer(p) + close(p, WA_GENERIC_URL)
-    write("contact.html", html)
+    html += footer() + close(WA_GENERIC_URL)
+    write(out_file("contact"), html)
 
 
 def build_404():
-    p = ""
     title = "Page not found | IslamabadCleaners"
     meta = "That page does not exist. Browse IslamabadCleaners' cleaning services for Islamabad and Rawalpindi."
-    html = head(p, title, meta, "404.html", "images/og/default.jpg")
+    html = head(title, meta, "404", "images/og/default.jpg")
     # 404s must not be indexed
     html = html.replace('content="index, follow, max-image-preview:large"',
                         'content="noindex, follow"')
-    html += nav(p)
+    html += nav()
     html += f"""<main id="main">
 <div class="wrap page-404">
 <p class="display">404</p>
 <h1>That page has been cleaned away</h1>
 <p>The link is broken or the page has moved. Everything we offer is one click away.</p>
 <div class="cta-row" style="justify-content:center">
-<a class="btn btn-ink" href="index.html">Go to homepage</a>
+<a class="btn btn-ink" href="/">Go to homepage</a>
 <a class="btn btn-wa" href="{WA_GENERIC_URL}" target="_blank" rel="noopener">{icon('wa')} WhatsApp us</a>
 </div>
 </div>
 </main>
 """
-    html += footer(p) + close(p, WA_GENERIC_URL)
+    html += footer() + close(WA_GENERIC_URL)
+    # 404.html stays a real file at the root — the host serves it for any miss.
     write("404.html", html)
+
+
+# ------------------------------------------------------------- routing -----
+def clean_paths():
+    """Every indexable page, as a clean path ('' = homepage)."""
+    return ["", "services", "about", "contact"] + [f"services/{s['slug']}" for s in SERVICES]
+
+
+def build_vercel_json():
+    """Redirect every legacy .html URL to its clean equivalent (permanent, 308).
+
+    Written to both the repo root and docs/ so it applies whether the Vercel
+    project's root directory is the repo or the docs/ output folder.
+    """
+    config = {
+        "cleanUrls": True,
+        "trailingSlash": False,
+        "redirects": [
+            {"source": f"/{path}.html", "destination": url(path), "permanent": True}
+            for path in clean_paths() if path
+        ] + [{"source": "/index.html", "destination": "/", "permanent": True}],
+    }
+    body = json.dumps(config, indent=2) + "\n"
+    for target in (os.path.join(ROOT, "vercel.json"), os.path.join(DOCS, "vercel.json")):
+        with open(target, "w", encoding="utf-8", newline="\n") as f:
+            f.write(body)
 
 
 # ---------------------------------------------------- sitemap & robots -----
 def build_sitemap():
-    paths = ["", "services.html", "about.html", "contact.html"]
-    paths += [f"services/{s['slug']}.html" for s in SERVICES]
     urls = "\n".join(
-        f"<url><loc>{S.BASE_URL}/{p}</loc><lastmod>{LASTMOD}</lastmod></url>"
-        for p in paths)
+        f"<url><loc>{canonical_url(p)}</loc><lastmod>{LASTMOD}</lastmod></url>"
+        for p in clean_paths())
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            f"{urls}\n</urlset>\n")
@@ -779,11 +813,30 @@ def build_sitemap():
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {S.BASE_URL}/sitemap.xml\n")
 
 
+WRITTEN = set()
+
+
 def write(rel, html):
     path = os.path.join(DOCS, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
+    WRITTEN.add(os.path.normpath(path))
+
+
+def prune():
+    """Delete .html files left over from a previous layout, and empty dirs."""
+    for dirpath, _, files in os.walk(DOCS):
+        for f in files:
+            if not f.endswith(".html"):
+                continue
+            full = os.path.normpath(os.path.join(dirpath, f))
+            if full not in WRITTEN:
+                os.remove(full)
+                print(f"  pruned stale page: {os.path.relpath(full, DOCS)}")
+    for dirpath, dirnames, files in os.walk(DOCS, topdown=False):
+        if dirpath != DOCS and not dirnames and not files:
+            os.rmdir(dirpath)
 
 
 def main():
@@ -796,8 +849,10 @@ def main():
     build_about()
     build_contact()
     build_404()
+    prune()
     build_sitemap()
-    print(f"Built {4 + len(SERVICES) + 1} pages + sitemap + robots into docs/")
+    build_vercel_json()
+    print(f"Built {4 + len(SERVICES) + 1} pages + sitemap + robots + vercel.json into docs/")
 
 
 if __name__ == "__main__":

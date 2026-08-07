@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://islamabadcleaners.com/sitemap.xml
+Sitemap: https://www.islamabadcleaners.com/sitemap.xml

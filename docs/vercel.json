@@ -1,0 +1,131 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services/deep-cleaning.html",
+      "destination": "/services/deep-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/house-cleaning.html",
+      "destination": "/services/house-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/post-construction-cleaning.html",
+      "destination": "/services/post-construction-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/post-renovation-cleaning.html",
+      "destination": "/services/post-renovation-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/move-in-cleaning.html",
+      "destination": "/services/move-in-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/move-out-cleaning.html",
+      "destination": "/services/move-out-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/sofa-cleaning.html",
+      "destination": "/services/sofa-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/carpet-cleaning.html",
+      "destination": "/services/carpet-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/rug-cleaning.html",
+      "destination": "/services/rug-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/mattress-cleaning.html",
+      "destination": "/services/mattress-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/office-chair-cleaning.html",
+      "destination": "/services/office-chair-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/dining-chair-cleaning.html",
+      "destination": "/services/dining-chair-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/marble-polishing.html",
+      "destination": "/services/marble-polishing",
+      "permanent": true
+    },
+    {
+      "source": "/services/tile-cleaning.html",
+      "destination": "/services/tile-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/floor-care.html",
+      "destination": "/services/floor-care",
+      "permanent": true
+    },
+    {
+      "source": "/services/window-cleaning.html",
+      "destination": "/services/window-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/glass-cleaning.html",
+      "destination": "/services/glass-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/solar-panel-cleaning.html",
+      "destination": "/services/solar-panel-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-tank-cleaning.html",
+      "destination": "/services/water-tank-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/swimming-pool-cleaning.html",
+      "destination": "/services/swimming-pool-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/services/janitorial-services.html",
+      "destination": "/services/janitorial-services",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
