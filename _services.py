@@ -48,10 +48,22 @@ SERVICES = [
         "img": "carpet-cleaning.jpg",
     },
     {
+        "slug": "rug-cleaning",
+        "name": "Rug Cleaning",
+        "card": "Qaleen, oriental and machine-made rugs colour-tested and cleaned gently, at home or collected.",
+        "img": "rug-cleaning.jpg",
+    },
+    {
         "slug": "mattress-cleaning",
         "name": "Mattress Cleaning",
         "card": "Deep sanitising that pulls dust, allergens and sweat residue out of the mattress layers.",
         "img": "mattress-cleaning.jpg",
+    },
+    {
+        "slug": "office-chair-cleaning",
+        "name": "Office Chair Cleaning",
+        "card": "Mesh, fabric and leather chairs deep cleaned in batches, scheduled outside working hours.",
+        "img": "office-chair-cleaning.jpg",
     },
     {
         "slug": "marble-polishing",
@@ -88,6 +100,18 @@ SERVICES = [
         "name": "Solar Panel Cleaning",
         "card": "Safe removal of the dust layer that quietly cuts how much power your panels produce.",
         "img": "solar-panel-cleaning.jpg",
+    },
+    {
+        "slug": "water-tank-cleaning",
+        "name": "Water Tank Cleaning",
+        "card": "Overhead and underground tanks emptied, scrubbed and disinfected — plastic and concrete.",
+        "img": "water-tank-cleaning.jpg",
+    },
+    {
+        "slug": "swimming-pool-cleaning",
+        "name": "Swimming Pool Cleaning",
+        "card": "Green pool recovery and weekly service — vacuuming, filters and properly balanced water.",
+        "img": "swimming-pool-cleaning.jpg",
     },
     {
         "slug": "janitorial-services",

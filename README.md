@@ -1,121 +1,44 @@
-# Cleaning Services Website — Islamabad & Rawalpindi
+# CleanCrew — cleaning services in Islamabad & Rawalpindi
 
-Static marketing site for a cleaning services company operating in Islamabad and
-Rawalpindi. Plain HTML/CSS/JS (Bootstrap 5) — no build step required to deploy,
-and it runs on any free static host.
+Static site, live at **https://effendii69.github.io/cleancrew/** (GitHub Pages
+serves the `docs/` folder on `main`).
 
-**Working brand name is `CleanCrew` — this is a placeholder.** Changing it is a
-one-line edit in each build script's `BRAND` constant, then re-running the pipeline.
+## How it works
 
----
-
-## Structure
+Everything in `docs/` is generated. Edit the data files, then rebuild:
 
 ```
-site/                  The live website — deploy this folder
-  index.html           Home
-  services.html        Services index
-  services/*.html      15 service pages
-  about.html
-  contact.html
-  page-404.html
-  css/custom.css       All of our overrides (the vendor CSS is untouched)
-  images/
-
-superclean-alt/        Alternative template kept for reference (the "5003" option)
-
-*.py                   Content + build scripts (see below)
+pip install pillow
+python build.py      # regenerates all 24 pages + sitemap.xml + robots.txt
+python verify.py     # bulletproof gate: links, meta, schema, weights — must pass
 ```
 
-`site/` is fully static. Nothing in it depends on the Python scripts at runtime —
-those only regenerate the HTML.
-
----
-
-## Running locally
-
-```bash
-cd site && python -m http.server 5004
-```
-
-Then open <http://localhost:5004>.
-
-The alternative template:
-
-```bash
-cd superclean-alt && python -m http.server 5003
-```
-
----
-
-## Regenerating the site
-
-Content lives in Python data files so that copy edits do not mean hand-editing 20
-HTML pages. Install the one dependency, then run the pipeline **in this order**:
-
-```bash
-pip install beautifulsoup4 lxml
-python apply_content.py && python build_services.py && python build_service_page.py && python build_pages.py && python finalize.py && python fix_a11y.py
-```
-
-| Script | What it does |
+| File | What lives there |
 |---|---|
-| `apply_content.py` | Swaps template demo content for the real business content |
-| `build_services.py` | Builds the oval services grid on the home and services pages |
-| `build_service_page.py` | Generates the 15 service pages from `_service_pages.py` |
-| `build_pages.py` | Generates `about.html` and `contact.html` |
-| `finalize.py` | Nav, footer, testimonials, areas strip, WhatsApp CTAs, favicon, 404 |
-| `fix_a11y.py` | Heading order, alt attributes, accessible link names |
+| `_site.py` | **Config**: BASE_URL, brand, phone/WhatsApp, email, featured services, promise/steps copy |
+| `_services.py` | The 19 services — slug, name, card copy |
+| `_service_pages.py` + `_pages_*.py` | Long-form service page content (intro, inclusions, FAQs…) |
+| `_content.py` | Homepage FAQs, about copy, features, area lists |
+| `build.py` | Templates + generator (also holds the short meta descriptions) |
+| `make_images.py` | Rebuilds optimized images from `raw-images/` (not in git) |
+| `verify.py` | The QA gate — run it before every push |
 
-### Where the content lives
+## Common tasks
 
-| File | Contents |
-|---|---|
-| `_services.py` | The 15 services — slug, card copy, photo. Single source of truth for nav, footer, grids and related links |
-| `_service_pages.py` | Deep cleaning page copy, plus merges the four modules below |
-| `_pages_property.py` | Post-construction, post-renovation, move-in, move-out |
-| `_pages_furniture.py` | Sofa, carpet, mattress |
-| `_pages_surfaces.py` | Marble, tile, floor care |
-| `_pages_exterior.py` | Window, glass, solar panel, janitorial |
-| `finalize.py` | Testimonials, footer areas, contact details |
+- **New phone number / domain**: change it in `_site.py`, run `python build.py`,
+  commit `docs/`. When a real domain is bought, set `BASE_URL`, rebuild, and
+  configure the custom domain in the GitHub Pages settings.
+- **Edit service copy**: find the dict in `_pages_*.py` / `_pages_new.py`,
+  edit, rebuild.
+- **Replace a photo**: drop a JPG named `{slug}.jpg` into `raw-images/`, run
+  `python make_images.py`, rebuild. Replace stock photos with real job photos
+  whenever you can — image credits are in `docs/images/CREDITS.txt`.
+- **Deploy**: commit and push `main`; GitHub Pages redeploys automatically.
 
----
+## Before-launch notes
 
-## Deploying
-
-`site/` is static, so any of these work on a free tier:
-
-- **Cloudflare Pages** — recommended. Free tier permits commercial use. Point it
-  at this repo and set the output directory to `site`.
-- **Netlify** — same approach, publish directory `site`.
-- **GitHub Pages** — works, but serves from a subpath unless a custom domain is set.
-
-Both Cloudflare Pages and Netlify serve `/services/deep-cleaning` without the
-`.html`, which is why the internal links use `.html` and the canonicals do not.
-
-> Vercel's free Hobby tier is **not** suitable here — its terms restrict it to
-> personal, non-commercial projects.
-
----
-
-## Before this goes live
-
-1. **Replace the testimonials.** The four reviews in `finalize.py` are written,
-   not real. Fabricated reviews breach Google's policies and would invalidate
-   review schema. Collect real ones via Google Business Profile first.
-2. **Set the real brand name, domain and logo.** Update `BRAND` and `SITE_URL`
-   in the build scripts; the logo is currently the template's bubble icon.
-3. **Replace the photography.** All images are template stock.
-4. **Add `sitemap.xml` and `robots.txt`**, then submit to Search Console.
-5. **Set up the Google Business Profile.** For local search this matters more
-   than the website — the local pack sits above organic results for nearly every
-   query in this category.
-
-## Known state
-
-- 20 pages, 925 internal links, 0 broken, 0 missing assets
-- 111 WhatsApp deep links, each pre-filled with the relevant service context
-- Lighthouse (home, services, about, contact, service pages):
-  **Accessibility 100 · Best Practices 100 · SEO 100**
-- Performance is not yet optimised — the template ships jQuery and Bootstrap, and
-  images are unoptimised. Worth addressing after the design is signed off.
+- Testimonials were removed deliberately — the previous ones were placeholders,
+  and fabricated reviews violate Google's policies. Collect real ones.
+- Set up a **Google Business Profile** for Islamabad/Rawalpindi — it matters
+  more for local search than anything on this site.
+- Analytics are not installed (needs the owner's Google account).

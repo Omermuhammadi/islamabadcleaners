@@ -16,3 +16,7 @@ desktop.ini
 # Local build/temp
 *.log
 _shot.html
+
+# local working files
+scratch/
+raw-images/
