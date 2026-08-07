@@ -12,6 +12,12 @@ SERVICES = [
         "img": "deep-cleaning.jpg",
     },
     {
+        "slug": "house-cleaning",
+        "name": "House Cleaning",
+        "card": "The whole house cleaned room by room by an equipped crew — one-off or on a regular schedule.",
+        "img": "house-cleaning.jpg",
+    },
+    {
         "slug": "post-construction-cleaning",
         "name": "Post-Construction Cleaning",
         "card": "Cement dust, paint spots and builder's debris cleared so a new build is ready to move into.",
@@ -64,6 +70,12 @@ SERVICES = [
         "name": "Office Chair Cleaning",
         "card": "Mesh, fabric and leather chairs deep cleaned in batches, scheduled outside working hours.",
         "img": "office-chair-cleaning.jpg",
+    },
+    {
+        "slug": "dining-chair-cleaning",
+        "name": "Dining Chair Cleaning",
+        "card": "Food and oil marks shampooed and extracted from dining chair seats, at home, dry the same day.",
+        "img": "dining-chair-cleaning.jpg",
     },
     {
         "slug": "marble-polishing",

@@ -17,9 +17,10 @@ WA_GENERIC = "Hi CleanCrew, I'd like a quote for cleaning in Islamabad / Rawalpi
 
 # The 10 services featured on the homepage grid, in display order.
 HOME_FEATURED = [
-    "deep-cleaning", "sofa-cleaning", "carpet-cleaning", "rug-cleaning",
-    "mattress-cleaning", "office-chair-cleaning", "solar-panel-cleaning",
-    "water-tank-cleaning", "swimming-pool-cleaning", "tile-cleaning",
+    "deep-cleaning", "house-cleaning", "sofa-cleaning", "carpet-cleaning",
+    "rug-cleaning", "dining-chair-cleaning", "office-chair-cleaning",
+    "mattress-cleaning", "solar-panel-cleaning", "water-tank-cleaning",
+    "swimming-pool-cleaning", "tile-cleaning",
 ]
 
 # Trust microcopy shown under primary CTAs.

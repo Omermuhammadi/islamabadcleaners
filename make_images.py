@@ -80,9 +80,9 @@ def main():
             missing.append(slug)
             continue
         im = load(src)
-        save_capped(cover(im, 640, 427), os.path.join(OUT_SVC, f"{slug}-card.webp"), "WEBP", QUALITY_WEBP)
-        save_capped(cover(im, 720, 720), os.path.join(OUT_SVC, f"{slug}-hero.webp"), "WEBP", QUALITY_WEBP)
-        save_capped(cover(im, 1200, 630), os.path.join(OUT_OG, f"{slug}.jpg"), "JPEG", QUALITY_JPG, OG_MAX_KB)
+        save_capped(cover(im, 480, 320), os.path.join(OUT_SVC, f"{slug}-card.webp"), "WEBP", QUALITY_WEBP, 25)
+        save_capped(cover(im, 720, 720), os.path.join(OUT_SVC, f"{slug}-hero.webp"), "WEBP", QUALITY_WEBP, 90)
+        save_capped(cover(im, 1200, 630), os.path.join(OUT_OG, f"{slug}.jpg"), "JPEG", QUALITY_JPG, 80)
         print(f"ok  {slug}")
 
     hero = os.path.join(RAW, "hero-home.jpg")

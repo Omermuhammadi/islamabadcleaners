@@ -20,6 +20,11 @@ try:
     PAGES.update(_NEW)
 except ImportError:
     pass
+try:
+    from _pages_more import PAGES as _MORE
+    PAGES.update(_MORE)
+except ImportError:
+    pass
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DOCS = os.path.join(ROOT, "docs")
@@ -256,7 +261,7 @@ def crumbs_node(items):
 # ------------------------------------------------------- page sections -----
 def service_card(p, s):
     return f"""<a class="card" href="{p}services/{s['slug']}.html">
-<img src="{p}images/services/{s['slug']}-card.webp" alt="{s['name']} in Islamabad and Rawalpindi" width="640" height="427" loading="lazy" decoding="async">
+<img src="{p}images/services/{s['slug']}-card.webp" alt="{s['name']} in Islamabad and Rawalpindi" width="480" height="320" loading="lazy" decoding="async">
 <div class="card-body">
 <h3>{s['name']}</h3>
 <p>{s['card']}</p>
@@ -373,9 +378,9 @@ def build_home():
 </div>
 <p class="cta-trust">{S.CTA_TRUST}</p>
 <ul class="trust-row">
+<li>{icon('check', 18)} 10+ years in the twin cities</li>
 <li>{icon('check', 18)} Available 24/7</li>
 <li>{icon('check', 18)} We bring all equipment</li>
-<li>{icon('check', 18)} Supervised, checked work</li>
 </ul>
 </div>
 <figure class="arch">
