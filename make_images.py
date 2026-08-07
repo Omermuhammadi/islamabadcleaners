@@ -89,7 +89,6 @@ def main():
     if os.path.exists(hero):
         im = load(hero)
         save_capped(cover(im, 900, 1125, fx=0.74), os.path.join(OUT_IMG, "hero-home.webp"), "WEBP", QUALITY_WEBP)
-        save_capped(cover(im, 1200, 630), os.path.join(OUT_OG, "default.jpg"), "JPEG", QUALITY_JPG, OG_MAX_KB)
     else:
         missing.append("hero-home")
 
@@ -97,6 +96,9 @@ def main():
     if os.path.exists(team):
         im = load(team)
         save_capped(cover(im, 720, 720), os.path.join(OUT_IMG, "about-team.webp"), "WEBP", QUALITY_WEBP)
+        # homepage hero: 4:5 crop centred on the crew
+        save_capped(cover(im, 900, 1125, fx=0.42), os.path.join(OUT_IMG, "hero-crew.webp"), "WEBP", QUALITY_WEBP)
+        save_capped(cover(im, 1200, 630, fx=0.42), os.path.join(OUT_OG, "default.jpg"), "JPEG", QUALITY_JPG, OG_MAX_KB)
     else:
         missing.append("about-team")
 

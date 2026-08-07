@@ -351,13 +351,13 @@ def build_home():
 </div>
 <p class="cta-trust">{S.CTA_TRUST}</p>
 <ul class="trust-row">
-<li>{icon('clock', 18)} Available 24/7</li>
-<li>{icon('shield', 18)} We bring all equipment</li>
-<li>{icon('check', 18)} Fixed written quotes</li>
+<li>{icon('check', 18)} Available 24/7</li>
+<li>{icon('check', 18)} We bring all equipment</li>
+<li>{icon('check', 18)} Supervised, checked work</li>
 </ul>
 </div>
 <figure class="arch">
-<img src="images/hero-home.webp" alt="CleanCrew technician deep-cleaning a sofa with an extraction machine" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="images/hero-crew.webp" alt="CleanCrew cleaning team with professional equipment, ready for a job" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
