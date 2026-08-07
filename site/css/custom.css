@@ -1,0 +1,880 @@
+/* ==========================================================================
+   CleanCrew — custom overrides
+   Loaded AFTER tooplate-clean-work.css so nothing in the vendor file is edited
+   directly and the template stays upgradeable.
+   ========================================================================== */
+
+:root {
+  --cc-navy: #1b3a5c;
+  --cc-navy-deep: #14293f;
+  --cc-gold: #e9c46a;
+  --cc-gold-soft: #f4e3bd;
+  --cc-ink: #10233a;
+  --cc-muted: #5b6b7c;
+  --cc-line: #e6ecf2;
+}
+
+/* --------------------------------------------------------------------------
+   1. ANNOUNCEMENT BAR
+   Was light blue (--primary-color) sitting directly above a blue-overlaid
+   hero, so the two blended and the phone number was hard to read. Now white
+   with dark text — the contact details are the first thing you see.
+   -------------------------------------------------------------------------- */
+.site-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--cc-line);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.site-header p,
+.site-header p a,
+.site-header .social-icon-link,
+.site-header .site-header-icon {
+  color: var(--cc-ink) !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.site-header p a:hover {
+  color: var(--cc-navy) !important;
+}
+
+/* phone number gets a little more presence than the rest of the bar */
+.site-header .site-header-icon-wrap a {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.site-header .site-header-icon {
+  color: #25d366 !important; /* WhatsApp mark reads instantly */
+}
+
+/* The navbar is position:absolute with top:49px, which was tuned for the old
+   15px-padded header. The white bar is shorter now, so re-seat it. */
+.navbar {
+  top: 42px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   1b. CONTRAST FIXES
+   The template puts white text on its light blue (#7cb8eb) — 2.11:1, a hard
+   WCAG AA failure. Navy backgrounds take the same white text to 12:1+.
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--cc-navy-deep) !important;
+}
+
+.site-footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.site-footer a,
+.site-footer p,
+.site-footer li,
+.cc-footer-title {
+  color: #ffffff !important;
+}
+
+.site-footer .footer-menu-link,
+.site-footer p {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.site-footer a:hover,
+.site-footer .footer-menu-link:hover {
+  color: var(--cc-gold) !important;
+}
+
+/* footer section titles: were <h5>, now <p> so heading levels don't skip —
+   keep the visual weight they had */
+.cc-footer-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* brand wordmark sits over dark imagery in the navbar */
+.navbar-brand span,
+.navbar-brand:hover span {
+  color: #ffffff !important;
+}
+
+/* "Need help? Please call us" call-out — same 2.11:1 failure as the footer */
+.custom-block {
+  background: var(--cc-navy-deep) !important;
+}
+
+.custom-block,
+.custom-block p,
+.custom-block a,
+.custom-block .cc-boxtitle {
+  color: #ffffff !important;
+}
+
+.custom-block a:hover {
+  color: var(--cc-gold) !important;
+}
+
+.custom-block i {
+  color: var(--cc-gold) !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. SERVICES — oval cards
+   Modelled on the layout the client liked on bestcleaners.pk: circular photo
+   in a soft gold ring, stadium-shaped card, arrow affordance at the bottom.
+   Rebuilt rather than copied so it behaves properly at every width.
+   -------------------------------------------------------------------------- */
+.svc {
+  padding: 90px 0 100px;
+  background: #f7fafc;
+}
+
+.svc__eyebrow {
+  text-align: center;
+  color: var(--cc-navy);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.svc__title {
+  text-align: center;
+  color: var(--cc-ink);
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.svc__lead {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 54px;
+  color: var(--cc-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.svc__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.svc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 26px 22px 30px;
+  background: #fff;
+  /* the stadium shape — half the card width, so top and bottom read as
+     true semicircles at every column count */
+  border-radius: 148px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 12px 34px rgba(20, 45, 75, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* diagonal sheen, the detail that stops it looking like a plain white pill */
+.svc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0) 42%,
+    rgba(233, 196, 106, 0.13) 47%,
+    rgba(255, 255, 255, 0) 64%
+  );
+  pointer-events: none;
+}
+
+.svc-card:hover,
+.svc-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(20, 45, 75, 0.16);
+}
+
+.svc-card__media {
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  padding: 6px;
+  background: var(--cc-gold-soft);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.svc-card__media img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.svc-card__name {
+  color: var(--cc-ink);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.svc-card__text {
+  color: var(--cc-muted);
+  font-size: 15px;
+  line-height: 1.62;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.svc-card__go {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--cc-navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.svc-card:hover .svc-card__go {
+  background: var(--cc-gold);
+  color: var(--cc-navy-deep);
+  transform: translateX(2px);
+}
+
+/* --- responsive ---------------------------------------------------------
+   The stadium radius has to shrink with the card, otherwise the curve eats
+   the content on narrow columns. */
+@media (max-width: 1199px) {
+  .svc__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .svc__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .svc-card {
+    border-radius: 130px;
+  }
+}
+
+@media (max-width: 575px) {
+  .svc {
+    padding: 60px 0 70px;
+  }
+  .svc__lead {
+    margin-bottom: 36px;
+  }
+  .svc__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .svc-card {
+    border-radius: 92px;
+    padding: 18px 12px 22px;
+  }
+  .svc-card__media {
+    width: 116px;
+    height: 116px;
+    padding: 5px;
+    margin-bottom: 14px;
+  }
+  .svc-card__name {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .svc-card__text {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .svc-card__go {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+}
+
+/* very narrow phones: one column reads better than two cramped ones */
+@media (max-width: 359px) {
+  .svc__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .svc-card {
+    border-radius: 150px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. SERVICE DETAIL PAGES
+   -------------------------------------------------------------------------- */
+/* The photo is set with an inline `background-image` on the element rather
+   than through a CSS custom property. Relative URLs inside a custom property
+   resolve against the STYLESHEET, not the document — which silently turned
+   `images/x.jpg` into `/css/images/x.jpg` and 404'd. Inline styles resolve
+   against the document, so the same path works from any directory depth. */
+.svcpage-hero {
+  position: relative;
+  background-color: var(--cc-navy-deep);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  /* top padding clears the absolutely-positioned navbar that sits over it */
+  padding: 158px 0 74px;
+}
+
+.svcpage-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 41, 63, 0.8);
+}
+
+.svcpage-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.svcpage-hero h1 {
+  font-size: clamp(28px, 4.6vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.svcpage-hero p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 640px;
+  margin-bottom: 26px;
+}
+
+.svcpage-crumbs {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 18px;
+}
+
+.svcpage-crumbs a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.svcpage-crumbs a:hover {
+  color: var(--cc-gold);
+}
+
+.svcpage-hero .cc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0 10px 10px 0;
+}
+
+.cc-btn--wa {
+  background: #25d366;
+  color: #10233a;
+}
+
+.cc-btn--wa:hover {
+  background: #1fbb59;
+  color: #10233a;
+}
+
+.cc-btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.cc-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.svcbody {
+  padding: 66px 0 40px;
+}
+
+.svcbody h2 {
+  font-size: clamp(24px, 3.4vw, 34px);
+  font-weight: 700;
+  color: var(--cc-ink);
+  margin: 44px 0 16px;
+  line-height: 1.22;
+}
+
+.svcbody h2:first-of-type {
+  margin-top: 0;
+}
+
+.svcbody h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--cc-ink);
+  margin: 28px 0 10px;
+}
+
+.svcbody p {
+  color: var(--cc-muted);
+  font-size: 16.5px;
+  line-height: 1.78;
+  margin-bottom: 16px;
+}
+
+.svcbody ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+.svcbody ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 11px;
+  color: var(--cc-muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.svcbody ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cc-gold);
+}
+
+.svcbody ul.cc-cross li::before {
+  background: #cdd6de;
+}
+
+.cc-panel {
+  background: #f7fafc;
+  border: 1px solid var(--cc-line);
+  border-radius: 18px;
+  padding: 26px 26px 10px;
+  margin: 26px 0;
+}
+
+.cc-panel h3 {
+  margin-top: 0;
+}
+
+.cc-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 16px 0 26px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.cc-areas li {
+  background: #fff;
+  border: 1px solid var(--cc-line);
+  border-radius: 100px;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: var(--cc-ink);
+  margin: 0;
+}
+
+.cc-areas li::before {
+  display: none;
+}
+
+/* sticky quote box on the service pages */
+.cc-aside {
+  position: sticky;
+  top: 20px;
+  background: var(--cc-navy-deep);
+  color: #fff;
+  border-radius: 20px;
+  padding: 28px 26px;
+}
+
+.cc-aside h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.cc-aside p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.cc-aside .cc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 50px;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.cc-aside-fact {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 14px;
+  line-height: 1.55;
+}
+
+.cc-aside-fact i {
+  color: var(--cc-gold);
+  margin-top: 2px;
+}
+
+/* FAQ accordion (native details — no JS, and crawlers read every answer) */
+.cc-faq {
+  border-top: 1px solid var(--cc-line);
+  margin-top: 8px;
+}
+
+.cc-faq details {
+  border-bottom: 1px solid var(--cc-line);
+}
+
+.cc-faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 40px 18px 0;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--cc-ink);
+  position: relative;
+}
+
+.cc-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.cc-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 6px;
+  top: 15px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--cc-navy);
+  transition: transform 0.2s ease;
+}
+
+.cc-faq details[open] summary::after {
+  content: "–";
+}
+
+.cc-faq .cc-faq__a {
+  padding: 0 0 20px;
+  color: var(--cc-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* related services strip */
+.cc-related {
+  background: #f7fafc;
+  padding: 60px 0 70px;
+}
+
+.cc-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cc-related-card {
+  background: #fff;
+  border: 1px solid var(--cc-line);
+  border-radius: 14px;
+  padding: 18px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cc-related-card:hover {
+  border-color: var(--cc-navy);
+  transform: translateY(-3px);
+}
+
+.cc-related-card strong {
+  display: block;
+  color: var(--cc-ink);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.cc-related-card span {
+  color: var(--cc-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .cc-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cc-aside {
+    position: static;
+    margin-top: 34px;
+  }
+}
+
+@media (max-width: 575px) {
+  .svcbody {
+    padding: 44px 0 30px;
+  }
+  .cc-related-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .svcpage-hero {
+    padding: 126px 0 50px;
+  }
+}
+
+/* the floating WhatsApp/call buttons must clear the mobile footer */
+@media (max-width: 575px) {
+  .cc-float a {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. AREAS STRIP
+   Replaces the template's stock partner logos. Real coverage beats five
+   unrelated brand marks, and it is genuine local-SEO text.
+   -------------------------------------------------------------------------- */
+.cc-areas-strip {
+  background: #fff;
+  padding: 70px 0 80px;
+  border-top: 1px solid var(--cc-line);
+}
+
+.cc-areas--center {
+  justify-content: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cc-areas--center li {
+  background: #f7fafc;
+  border-color: var(--cc-line);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   5. TESTIMONIALS
+   -------------------------------------------------------------------------- */
+.testimonial-section .featured-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-tst-name {
+  font-family: var(--body-font-family);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cc-ink);
+  line-height: 1.3;
+}
+
+.cc-tst-area {
+  font-size: 13px;
+  color: var(--cc-muted);
+}
+
+.testimonial-section .reviews-icons i {
+  color: var(--cc-gold);
+  font-size: 13px;
+}
+
+.testimonial-section .avatar-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* The template puts white text on its light blue inside these cards — 2.11:1.
+   White cards with ink text take the same content to 16:1 and match the
+   service cards elsewhere on the page. */
+.testimonial-section .featured-block {
+  background: #ffffff !important;
+  border-radius: 16px;
+  padding: 26px 24px;
+  box-shadow: 0 12px 30px rgba(20, 45, 75, 0.12);
+}
+
+.testimonial-section .featured-block p {
+  color: var(--cc-muted) !important;
+}
+
+.testimonial-section .featured-block .cc-tst-name {
+  color: var(--cc-ink) !important;
+}
+
+/* Call-out box titles that used to be <h5>/<h6> (see fix_a11y.py) */
+.cc-boxtitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+/* Body links: the template's light blue fails contrast on pale backgrounds */
+.svcbody a:not(.cc-btn),
+.cc-panel a,
+.cc-faq a {
+  color: var(--cc-navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.svcbody a:not(.cc-btn):hover,
+.cc-panel a:hover {
+  color: var(--cc-accent, #0b6650);
+}
+
+/* --------------------------------------------------------------------------
+   6. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  padding-top: 64px;
+}
+
+.cc-foot-text {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 42ch;
+  margin-bottom: 20px;
+}
+
+.cc-foot-contact,
+.cc-foot-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cc-foot-contact li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.cc-foot-contact i {
+  color: var(--cc-gold);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cc-foot-links li {
+  margin-bottom: 9px;
+}
+
+.cc-foot-links a {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.cc-foot-areas {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 26px;
+  margin-top: 10px;
+}
+
+.cc-foot-areas .cc-areas li {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+}
+
+.site-footer-bottom {
+  margin-top: 26px;
+  padding: 22px 0 28px;
+}
+
+.site-footer-bottom p {
+  font-size: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   7. SERVICES DROPDOWN
+   -------------------------------------------------------------------------- */
+.navbar .dropdown-menu {
+  border: 1px solid var(--cc-line);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 18px 44px rgba(11, 28, 44, 0.16);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.navbar .dropdown-item {
+  border-radius: 7px;
+  padding: 9px 12px;
+  font-size: 15px;
+  color: var(--cc-ink);
+  white-space: normal;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background: var(--cc-navy);
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .navbar .dropdown-menu {
+    max-height: 58vh;
+    background: #fff;
+  }
+}
