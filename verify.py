@@ -26,7 +26,7 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "param", "source", "track", "wbr"}
 
 BANNED = ["cleancrew.pk", "tooplate", "bootstrap", "freepik", "jquery",
-          "Ayesha K.", "Bilal R.", "Hina M.", "Usman T.", "backstretch"]
+          "backstretch"]
 
 
 def err(page, msg):

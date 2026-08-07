@@ -33,9 +33,9 @@ PROMISE = [
     ("A walkthrough before we leave",
      "You check the work with the supervisor room by room. Anything you flag "
      "gets redone on the spot, not argued about."),
-    ("No fake reviews on this site",
-     "We could paste five-star quotes here like everyone else. We'd rather you "
-     "judge us on the first job — that's how our regular customers started."),
+    ("Straight answers before we start",
+     "If a stain won't come out fully, we say so before quoting — not after. "
+     "If the cheaper service is enough, we tell you that too."),
 ]
 
 STEPS = [

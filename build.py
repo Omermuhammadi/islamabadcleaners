@@ -71,6 +71,7 @@ def icon(name, size=20):
         "clock": '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l5.2 3.1 1-1.6-4.2-2.5V7z"/>',
         "mail": '<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>',
         "shield": '<path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/>',
+        "star": '<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2z"/>',
     }
     return (f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="currentColor" '
             f'aria-hidden="true">{paths[name]}</svg>')
@@ -298,6 +299,27 @@ def cta_band(h2, para, wa_link_url):
 """
 
 
+def reviews_section():
+    stars = "".join(icon("star", 16) for _ in range(5))
+    cards = "\n".join(
+        f"""<div class="review-card">
+<p class="stars" aria-label="5 out of 5 stars">{stars}</p>
+<p class="review-text">&ldquo;{text}&rdquo;</p>
+<p class="review-who">{name} &middot; {area}</p>
+</div>"""
+        for name, area, text in C.TESTIMONIALS)
+    return f"""<section class="section">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">What customers say</p>
+<h2>Word travels fast in the twin cities</h2>
+</div>
+<div class="review-grid">{cards}</div>
+</div>
+</section>
+"""
+
+
 def promise_section():
     icons = ["shield", "check", "wa"]
     cards = "\n".join(
@@ -357,7 +379,7 @@ def build_home():
 </ul>
 </div>
 <figure class="arch">
-<img src="images/hero-crew.webp" alt="CleanCrew cleaning team with professional equipment, ready for a job" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="images/hero-crew.webp" alt="CleanCrew cleaners vacuuming and mopping a living room in Islamabad" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -386,7 +408,9 @@ def build_home():
 
 {promise_section()}
 
-<section class="section">
+{reviews_section()}
+
+<section class="section section-mist">
 <div class="wrap">
 <div class="section-head">
 <p class="eyebrow">Common questions</p>
