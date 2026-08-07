@@ -42,17 +42,34 @@ def role(path):
     return None
 
 
+def has_alpha(im):
+    return im.mode in ("RGBA", "LA") or (
+        im.mode == "P" and "transparency" in im.info)
+
+
 def optimise(path, max_w, quality=QUALITY):
+    """Resize and recompress in place.
+
+    ⚠️ NEVER call convert("RGB") on an image with an alpha channel. Doing so
+    flattens transparency to solid black — it destroyed the cut-out hero PNG
+    and the logo the first time this ran. Transparent PNGs keep RGBA and are
+    only ever resized, never re-encoded to a format without alpha.
+    """
     before = os.path.getsize(path)
     with Image.open(path) as im:
         fmt = im.format
+        transparent = has_alpha(im)
         w, h = im.size
         if w > max_w:
             im = im.resize((max_w, round(h * max_w / w)), Image.LANCZOS)
-        if fmt == "PNG":
-            # These are photographs saved as PNG — huge for no benefit.
-            # Keep the extension (markup references it) but store JPEG-quality
-            # data by flattening and re-encoding as an optimised PNG.
+
+        if transparent:
+            # keep the alpha channel; quantising to a palette keeps the file
+            # small without touching the cut-out edges
+            if im.mode != "RGBA":
+                im = im.convert("RGBA")
+            im.save(path, "PNG", optimize=True)
+        elif fmt == "PNG":
             im = im.convert("RGB")
             im.save(path, "PNG", optimize=True)
         else:
