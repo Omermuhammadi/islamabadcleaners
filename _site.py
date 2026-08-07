@@ -4,16 +4,16 @@ Change BASE_URL here (e.g. when a real domain is bought), run `python build.py`,
 and every canonical, og:url, schema id, sitemap entry and robots.txt updates.
 """
 
-BASE_URL = "https://effendii69.github.io/cleancrew"  # no trailing slash
+BASE_URL = "https://islamabadcleaners.com"  # no trailing slash
 
-BRAND = "CleanCrew"
+BRAND = "IslamabadCleaners"
 PHONE_DISPLAY = "0330 2935777"
 PHONE_TEL = "+923302935777"
 WHATSAPP = "923302935777"
 EMAIL = "mgcleaner364@gmail.com"
 
 # Pre-filled WhatsApp messages (URL-encoded at build time).
-WA_GENERIC = "Hi CleanCrew, I'd like a quote for cleaning in Islamabad / Rawalpindi."
+WA_GENERIC = "Hi IslamabadCleaners, I'd like a quote for cleaning in Islamabad / Rawalpindi."
 
 # The 10 services featured on the homepage grid, in display order.
 HOME_FEATURED = [
@@ -26,7 +26,7 @@ HOME_FEATURED = [
 # Trust microcopy shown under primary CTAs.
 CTA_TRUST = "Replies in minutes &middot; Fixed quote on WhatsApp &middot; No hidden charges"
 
-# The CleanCrew promise — replaces fabricated testimonials with verifiable commitments.
+# The IslamabadCleaners promise — replaces fabricated testimonials with verifiable commitments.
 PROMISE = [
     ("A fixed written quote before we start",
      "You get one number on WhatsApp, in writing, before we arrive. It does "

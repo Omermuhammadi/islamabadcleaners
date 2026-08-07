@@ -1,4 +1,4 @@
-# CleanCrew — cleaning services in Islamabad & Rawalpindi
+# IslamabadCleaners — cleaning services in Islamabad & Rawalpindi
 
 Static site, live at **https://effendii69.github.io/cleancrew/** (GitHub Pages
 serves the `docs/` folder on `main`).

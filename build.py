@@ -1,4 +1,4 @@
-"""CleanCrew site generator.
+"""IslamabadCleaners site generator.
 
 Reads _site.py (config), _services.py (catalogue), _service_pages.py (+_pages_new.py)
 and writes every page in docs/, plus sitemap.xml and robots.txt.
@@ -36,7 +36,7 @@ def wa_url(text):
 
 
 def wa_for(service_name):
-    return wa_url(f"Hi CleanCrew, I'd like a quote for {service_name} in Islamabad / Rawalpindi.")
+    return wa_url(f"Hi IslamabadCleaners, I'd like a quote for {service_name} in Islamabad / Rawalpindi.")
 
 
 WA_GENERIC_URL = wa_url(S.WA_GENERIC)
@@ -334,7 +334,7 @@ def promise_section():
     return f"""<section class="section section-mist">
 <div class="wrap">
 <div class="section-head">
-<p class="eyebrow">The CleanCrew promise</p>
+<p class="eyebrow">The IslamabadCleaners promise</p>
 <h2>No scripts, no surprises</h2>
 </div>
 <div class="promise-grid">{cards}</div>
@@ -360,7 +360,7 @@ def build_home():
         faq_nodes(C.FAQS),
     ]}
 
-    title = "Cleaning Services in Islamabad & Rawalpindi | CleanCrew"
+    title = "Cleaning Services in Islamabad & Rawalpindi | IslamabadCleaners"
     meta = ("Professional cleaning services in Islamabad & Rawalpindi — deep cleaning, "
             "sofa, carpet, water tank, solar panels & more. Open 24/7. WhatsApp 0330 2935777.")
 
@@ -385,7 +385,7 @@ def build_home():
 </ul>
 </div>
 <figure class="arch">
-<img src="images/hero-crew.webp" alt="CleanCrew cleaners vacuuming and mopping a living room in Islamabad" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="images/hero-crew.webp" alt="IslamabadCleaners cleaners vacuuming and mopping a living room in Islamabad" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -445,8 +445,8 @@ def build_services_index():
         crumbs_node([("Home", f"{S.BASE_URL}/"),
                      ("Services", f"{S.BASE_URL}/services.html")]),
     ]}
-    title = "All Cleaning Services in Islamabad & Rawalpindi | CleanCrew"
-    meta = (f"All {len(SERVICES)} CleanCrew services across Islamabad & Rawalpindi — from "
+    title = "All Cleaning Services in Islamabad & Rawalpindi | IslamabadCleaners"
+    meta = (f"All {len(SERVICES)} IslamabadCleaners services across Islamabad & Rawalpindi — from "
             "sofa and carpet to water tanks and solar panels. WhatsApp 0330 2935777.")
     html = head(p, title, meta, "services.html", "images/og/default.jpg", schema)
     html += nav(p, "services")
@@ -463,7 +463,7 @@ def build_services_index():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="images/about-team.webp" alt="CleanCrew professional cleaning team at work" width="720" height="720" loading="lazy" decoding="async">
+<img src="images/about-team.webp" alt="IslamabadCleaners professional cleaning team at work" width="720" height="720" loading="lazy" decoding="async">
 </figure>
 </div>
 </section>
@@ -520,7 +520,7 @@ def build_service_page(slug):
         faq_nodes(d["faqs"]),
     ]}
 
-    title = f"{s['name']} in Islamabad & Rawalpindi | CleanCrew"
+    title = f"{s['name']} in Islamabad & Rawalpindi | IslamabadCleaners"
     html = head(p, title, d["meta"], path, f"images/og/{slug}.jpg", schema)
     html += nav(p, "services")
     html += f"""<main id="main">
@@ -614,8 +614,8 @@ def build_about():
         crumbs_node([("Home", f"{S.BASE_URL}/"),
                      ("About", f"{S.BASE_URL}/about.html")]),
     ]}
-    title = "About CleanCrew | Cleaning Company in Islamabad & Rawalpindi"
-    meta = ("CleanCrew is a cleaning company serving Islamabad & Rawalpindi 24/7 — own "
+    title = "About IslamabadCleaners | Cleaning Company in Islamabad & Rawalpindi"
+    meta = ("IslamabadCleaners is a cleaning company serving Islamabad & Rawalpindi 24/7 — own "
             "equipment, fixed written quotes on WhatsApp. 0330 2935777.")
     html = head(p, title, meta, "about.html", "images/og/default.jpg", schema)
     html += nav(p, "about")
@@ -632,7 +632,7 @@ def build_about():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="images/about-team.webp" alt="CleanCrew cleaning team with professional equipment" width="720" height="720" fetchpriority="high" decoding="async">
+<img src="images/about-team.webp" alt="IslamabadCleaners cleaning team with professional equipment" width="720" height="720" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -683,8 +683,8 @@ def build_contact():
                      ("Contact", f"{S.BASE_URL}/contact.html")]),
         faq_nodes(faqs),
     ]}
-    title = "Contact CleanCrew | WhatsApp 0330 2935777 | Islamabad & Rawalpindi"
-    meta = ("Contact CleanCrew for cleaning in Islamabad and Rawalpindi. WhatsApp or "
+    title = "Contact IslamabadCleaners | WhatsApp 0330 2935777 | Islamabad & Rawalpindi"
+    meta = ("Contact IslamabadCleaners for cleaning in Islamabad and Rawalpindi. WhatsApp or "
             "call 0330 2935777 — replies in minutes, fixed quotes on WhatsApp, open 24/7.")
     html = head(p, title, meta, "contact.html", "images/og/default.jpg", schema)
     html += nav(p, "contact")
@@ -702,7 +702,7 @@ def build_contact():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="images/hero-home.webp" alt="CleanCrew technician cleaning a sofa" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="images/hero-home.webp" alt="IslamabadCleaners technician cleaning a sofa" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -740,8 +740,8 @@ def build_contact():
 
 def build_404():
     p = ""
-    title = "Page not found | CleanCrew"
-    meta = "That page does not exist. Browse CleanCrew's cleaning services for Islamabad and Rawalpindi."
+    title = "Page not found | IslamabadCleaners"
+    meta = "That page does not exist. Browse IslamabadCleaners' cleaning services for Islamabad and Rawalpindi."
     html = head(p, title, meta, "404.html", "images/og/default.jpg")
     # 404s must not be indexed
     html = html.replace('content="index, follow, max-image-preview:large"',

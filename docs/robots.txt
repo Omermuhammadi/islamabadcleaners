@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://effendii69.github.io/cleancrew/sitemap.xml
+Sitemap: https://islamabadcleaners.com/sitemap.xml

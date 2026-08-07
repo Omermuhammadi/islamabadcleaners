@@ -5,7 +5,7 @@ site/ and option-b/, so the two directions always carry identical copy and
 can be judged on design alone.
 """
 
-BRAND = "CleanCrew"
+BRAND = "IslamabadCleaners"
 TAGLINE = "Cleaning services in Islamabad &amp; Rawalpindi"
 PHONE_DISPLAY = "0330 2935777"
 PHONE_TEL = "+923302935777"
@@ -15,7 +15,7 @@ CITIES = "Islamabad &amp; Rawalpindi"
 YEARS = "10"
 HOURS = "Open 24/7"
 
-WA_TEXT = "Hi%20CleanCrew%2C%20I%27d%20like%20a%20quote%20for%20cleaning."
+WA_TEXT = "Hi%20IslamabadCleaners%2C%20I%27d%20like%20a%20quote%20for%20cleaning."
 WA_LINK = f"https://wa.me/{WHATSAPP}?text={WA_TEXT}"
 
 HERO_TITLE = "Professional cleaning services in Islamabad &amp; Rawalpindi"

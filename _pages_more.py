@@ -156,7 +156,7 @@ PAGES = {
 
     "house-cleaning": {
         "h1": "House Cleaning Services in Islamabad &amp; Rawalpindi",
-        "title": "House Cleaning Services in Islamabad & Rawalpindi | CleanCrew",
+        "title": "House Cleaning Services in Islamabad & Rawalpindi | IslamabadCleaners",
         "meta": ("House cleaning services in Islamabad & Rawalpindi — full-home "
                  "cleaning by an equipped crew, one-off or regular. Fixed price on "
                  "WhatsApp 0330 2935777."),
