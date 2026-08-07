@@ -59,14 +59,18 @@ def services_section(depth=0):
         cards.append(
             '<a class="svc-card" href="{up}services/{slug}.html">'
             '<span class="svc-card__media">'
-            '<img src="{up}images/services/{img}" alt="{name} in Islamabad and Rawalpindi" '
-            'width="172" height="172" loading="lazy">'
+            # 400px square thumbnail, not the 1200px hero original — the card
+            # renders it at 172px (see optimize_images.py)
+            '<img src="{up}images/services/thumb/{thumb}" '
+            'alt="{name} in Islamabad and Rawalpindi" '
+            'width="172" height="172" loading="lazy" decoding="async">'
             "</span>"
             '<span class="svc-card__name">{name}</span>'
             '<span class="svc-card__text">{card}</span>'
             '<span class="svc-card__go" aria-hidden="true">'
             '<i class="bi-chevron-right"></i></span>'
-            "</a>".format(up=up, slug=sv["slug"], img=sv["img"],
+            "</a>".format(up=up, slug=sv["slug"],
+                          thumb=os.path.splitext(sv["img"])[0] + ".jpg",
                           name=sv["name"], card=sv["card"])
         )
 

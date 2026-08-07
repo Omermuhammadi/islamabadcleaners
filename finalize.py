@@ -316,6 +316,58 @@ def add_icons(soup, depth):
         '<link rel="apple-touch-icon" href="%sapple-touch-icon.png">' % u, "lxml").link)
 
 
+def selfhost_fonts(soup, depth):
+    """Replace the Google Fonts <link> with the self-hosted stylesheet.
+
+    Measured on the live deployment: the fonts.googleapis.com request was
+    1014ms of render-blocking time for a 1KB file, because it needs a fresh
+    DNS lookup and TLS handshake to a third-party origin before the page can
+    paint. Serving the same faces from our own origin removes that entirely.
+    """
+    u = up(depth)
+    head = soup.head
+    if head is None:
+        return
+    for link in list(head.find_all("link", href=True)):
+        h = link["href"]
+        if "fonts.googleapis.com" in h or "fonts.gstatic.com" in h:
+            link.decompose()
+    # drop the now-pointless preconnects too
+    for link in list(head.find_all("link", rel=True)):
+        rels = link.get("rel")
+        rels = " ".join(rels) if isinstance(rels, list) else (rels or "")
+        if "preconnect" in rels and "fonts.g" in (link.get("href") or ""):
+            link.decompose()
+    if not head.find("link", href=lambda v: v and "poppins.css" in v):
+        # must come before the template CSS so it can be overridden
+        tag = BeautifulSoup(
+            '<link href="%scss/poppins.css" rel="stylesheet">' % u, "lxml").link
+        first = head.find("link", rel="stylesheet")
+        if first:
+            first.insert_before(tag)
+        else:
+            head.append(tag)
+
+
+def preload_hero(soup, path):
+    """The hero background is injected by the backstretch jQuery plugin, so the
+    browser cannot discover it until jQuery has parsed and run — measured at
+    ~2.7s of pure load delay on the live deployment, and it is the LCP element.
+    Preloading it lets the download start with the HTML.
+
+    Only index.html uses .hero-section; the other pages use .banner-section or
+    .svcpage-hero, which are CSS backgrounds already discoverable."""
+    if os.path.basename(path) != "index.html" or soup.select_one(".hero-section") is None:
+        return
+    head = soup.head
+    if head is None or soup.find("link", rel="preload", attrs={"as": "image"}):
+        return
+    head.append(BeautifulSoup(
+        '<link rel="preload" as="image" fetchpriority="high" '
+        'href="images/slideshow/afro-woman-cleaning-window-with-rag-home.jpg">',
+        "lxml").link)
+
+
 def inject_a11y_script(soup):
     if soup.find("script", string=re.compile("fixBackstretch")):
         return 0
@@ -367,6 +419,8 @@ def main():
             build_testimonials(soup, depth)
         ctas = fix_ctas(soup)
         inject_a11y_script(soup)
+        preload_hero(soup, path)
+        selfhost_fonts(soup, depth)
         if os.path.basename(path) == "page-404.html":
             fix_404(soup)
 

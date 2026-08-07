@@ -878,3 +878,19 @@
     background: #fff;
   }
 }
+
+/* --------------------------------------------------------------------------
+   8. HERO LCP
+   The backstretch plugin injects the hero image as an <img> only after jQuery
+   has parsed and executed, so the LCP element could not start painting until
+   ~2.7s. Painting the first slide as a CSS background makes it an LCP
+   candidate the moment the stylesheet lands; backstretch still layers its
+   rotating slides on top afterwards, so the visual behaviour is unchanged.
+   -------------------------------------------------------------------------- */
+.hero-section {
+  background-image: url("../images/slideshow/afro-woman-cleaning-window-with-rag-home.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--cc-navy-deep);
+}
