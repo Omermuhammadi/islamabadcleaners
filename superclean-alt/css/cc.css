@@ -1,0 +1,304 @@
+/* ==========================================================================
+   CleanCrew additions for the SuperClean template.
+   Loaded AFTER style.css. Everything here inherits SuperClean's own tokens
+   (--primary-color orange, --accent-color blue, Source Sans 3 / Lora), so the
+   added sections read as part of the original theme rather than bolted on.
+   ========================================================================== */
+
+:root {
+  --cc-line: #e6e6e6;
+  --cc-muted: var(--dark-color);
+  --cc-ink: var(--black-color);
+}
+
+/* --------------------------------------------------------- services grid -- */
+.cc-svc {
+  padding: 80px 0 90px;
+  background: var(--bs-gray-100);
+}
+
+.cc-eyebrow {
+  text-align: center;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.cc-title {
+  text-align: center;
+  font-family: var(--heading-font);
+  color: var(--cc-ink);
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.cc-lead {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 50px;
+  color: var(--cc-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.cc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 26px 22px 30px;
+  background: #fff;
+  border-radius: 148px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(44, 46, 47, 0.09);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.cc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(118deg, rgba(255, 255, 255, 0) 42%,
+    rgba(238, 142, 30, 0.1) 47%, rgba(255, 255, 255, 0) 64%);
+  pointer-events: none;
+}
+
+.cc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px rgba(44, 46, 47, 0.17);
+}
+
+.cc-card__media {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  padding: 6px;
+  background: var(--primary-color-200);
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+.cc-card__media img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.cc-card__name {
+  font-family: var(--heading-font);
+  color: var(--cc-ink);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 9px;
+}
+
+.cc-card__text {
+  color: var(--cc-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.cc-card__go {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.cc-card:hover .cc-card__go {
+  background: var(--accent-color);
+}
+
+@media (max-width: 1199px) { .cc-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 991px)  { .cc-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+                             .cc-card { border-radius: 130px; } }
+@media (max-width: 575px)  {
+  .cc-svc { padding: 56px 0 64px; }
+  .cc-lead { margin-bottom: 34px; }
+  .cc-grid { grid-template-columns: repeat(2, 1fr); gap: 13px; }
+  .cc-card { border-radius: 92px; padding: 18px 12px 22px; }
+  .cc-card__media { width: 112px; height: 112px; padding: 5px; margin-bottom: 13px; }
+  .cc-card__name { font-size: 14.5px; margin-bottom: 6px; }
+  .cc-card__text { font-size: 12.5px; line-height: 1.5; margin-bottom: 13px; }
+  .cc-card__go { width: 36px; height: 36px; font-size: 14px; }
+}
+@media (max-width: 359px) { .cc-grid { grid-template-columns: 1fr; } .cc-card { border-radius: 150px; } }
+
+/* ---------------------------------------------------------- areas strip -- */
+.cc-areas-strip { background: #fff; padding: 66px 0 74px; }
+
+.cc-chips {
+  display: flex; flex-wrap: wrap; gap: 9px;
+  justify-content: center; max-width: 900px; margin: 0 auto;
+  padding-left: 0; list-style: none;
+}
+
+.cc-chips li {
+  background: var(--bs-gray-100);
+  border: 1px solid var(--cc-line);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--cc-ink);
+}
+
+/* ------------------------------------------------------- service pages --- */
+.cc-hero {
+  position: relative;
+  background-color: var(--black-color);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding: 150px 0 70px;
+}
+
+.cc-hero::before { content: ""; position: absolute; inset: 0; background: rgba(31, 33, 34, 0.78); }
+.cc-hero > .container { position: relative; z-index: 1; }
+
+.cc-hero h1 {
+  font-family: var(--heading-font);
+  font-size: clamp(28px, 4.6vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.cc-hero p { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,.87); max-width: 640px; margin-bottom: 24px; }
+
+.cc-crumbs { font-size: 14px; color: rgba(255,255,255,.72); margin-bottom: 16px; }
+.cc-crumbs a { color: rgba(255,255,255,.88); text-decoration: none; }
+.cc-crumbs a:hover { color: var(--primary-color); }
+
+.cc-btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  height: 50px; padding: 0 24px; border-radius: 6px;
+  font-weight: 600; font-size: 16px; text-decoration: none;
+  margin: 0 10px 10px 0;
+}
+.cc-btn--wa { background: #25d366; color: #10233a; }
+.cc-btn--wa:hover { background: #1fbb59; color: #10233a; }
+.cc-btn--ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.45); }
+.cc-btn--ghost:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+.cc-body { padding: 64px 0 40px; }
+.cc-body h2 { font-family: var(--heading-font); font-size: clamp(24px,3.4vw,32px); font-weight: 700; color: var(--cc-ink); margin: 42px 0 15px; line-height: 1.22; }
+.cc-body h2:first-of-type { margin-top: 0; }
+.cc-body h3 { font-family: var(--heading-font); font-size: 20px; font-weight: 700; color: var(--cc-ink); margin: 26px 0 9px; }
+.cc-body p { color: var(--cc-muted); font-size: 16.5px; line-height: 1.78; margin-bottom: 15px; }
+.cc-body ul { padding-left: 0; list-style: none; margin-bottom: 18px; }
+.cc-body ul li { position: relative; padding-left: 28px; margin-bottom: 10px; color: var(--cc-muted); font-size: 16px; line-height: 1.65; }
+.cc-body ul li::before { content: ""; position: absolute; left: 3px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: var(--primary-color); }
+.cc-body ul.cc-cross li::before { background: #cfcfcf; }
+.cc-body a:not(.cc-btn) { color: var(--accent-color); text-decoration: underline; text-underline-offset: 2px; }
+
+.cc-panel { background: var(--bs-gray-100); border: 1px solid var(--cc-line); border-radius: 12px; padding: 24px 24px 8px; margin: 24px 0; }
+.cc-panel h3 { margin-top: 0; }
+
+.cc-aside { position: sticky; top: 20px; background: var(--black-color); color: #fff; border-radius: 14px; padding: 26px 24px; }
+.cc-aside h3 { font-family: var(--heading-font); color: #fff; font-size: 21px; font-weight: 700; margin: 0 0 10px; }
+.cc-aside p { color: rgba(255,255,255,.8); font-size: 15px; line-height: 1.65; margin-bottom: 16px; }
+.cc-aside .cc-btn { display: flex; justify-content: center; width: 100%; margin-bottom: 10px; }
+.cc-fact { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: rgba(255,255,255,.78); margin-top: 13px; line-height: 1.55; }
+.cc-fact i { color: var(--primary-color); margin-top: 2px; }
+
+.cc-faq { border-top: 1px solid var(--cc-line); margin-top: 8px; }
+.cc-faq details { border-bottom: 1px solid var(--cc-line); }
+.cc-faq summary { cursor: pointer; list-style: none; padding: 17px 40px 17px 0; font-family: var(--heading-font); font-weight: 600; font-size: 17px; color: var(--cc-ink); position: relative; }
+.cc-faq summary::-webkit-details-marker { display: none; }
+.cc-faq summary::after { content: "+"; position: absolute; right: 6px; top: 13px; font-size: 24px; color: var(--primary-color); }
+.cc-faq details[open] summary::after { content: "\2013"; }
+.cc-faq__a { padding: 0 0 19px; color: var(--cc-muted); font-size: 16px; line-height: 1.75; }
+
+.cc-related { background: var(--bs-gray-100); padding: 56px 0 66px; }
+.cc-related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.cc-related-card { background: #fff; border: 1px solid var(--cc-line); border-radius: 12px; padding: 18px; text-decoration: none; display: block; transition: border-color .2s, transform .2s; }
+.cc-related-card:hover { border-color: var(--primary-color); transform: translateY(-3px); }
+.cc-related-card strong { display: block; font-family: var(--heading-font); color: var(--cc-ink); font-size: 16px; margin-bottom: 4px; }
+.cc-related-card span { color: var(--cc-muted); font-size: 14px; }
+
+@media (max-width: 991px) {
+  .cc-related-grid { grid-template-columns: repeat(2, 1fr); }
+  .cc-aside { position: static; margin-top: 32px; }
+}
+@media (max-width: 575px) {
+  .cc-body { padding: 42px 0 28px; }
+  .cc-related-grid { grid-template-columns: 1fr; }
+  .cc-hero { padding: 120px 0 48px; }
+}
+
+/* --------------------------------------------------- floating contact ---- */
+.cc-float { position: fixed; right: 16px; bottom: 16px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+.cc-float a { width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,.28); transition: transform .15s ease; }
+.cc-float a:hover { transform: scale(1.07); }
+.cc-float .cc-wa { background: #25D366; }
+.cc-float .cc-call { background: var(--primary-color); }
+.cc-float svg { width: 27px; height: 27px; fill: #fff; }
+@media (max-width: 575px) { .cc-float a { width: 48px; height: 48px; } .cc-float svg { width: 23px; height: 23px; } }
+
+/* services dropdown in the nav */
+.navbar .dropdown-menu { border: 1px solid var(--cc-line); border-radius: 10px; padding: 8px; box-shadow: 0 18px 40px rgba(44,46,47,.16); max-height: 70vh; overflow-y: auto; }
+.navbar .dropdown-item { border-radius: 6px; padding: 9px 12px; font-size: 15px; white-space: normal; }
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus { background: var(--primary-color); color: #fff; }
+
+/* wordmark stands in for the template's SUPER CLEAN logo image */
+.cc-wordmark {
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  color: var(--black-color);
+  text-decoration: none;
+}
+.cc-wordmark:hover { color: var(--primary-color); }
+
+/* --------------------------------------------------------------------------
+   Contrast corrections. SuperClean's accent blue (#14ADEF) and primary orange
+   (#EE8E1E) are both below WCAG AA on white — 2.5:1 and 2.27:1 respectively.
+   Darkened variants keep the same hue while clearing 4.5:1.
+   -------------------------------------------------------------------------- */
+:root {
+  --cc-accent-aa: #0A6FA0;   /* darkened --accent-color  4.9:1 on white */
+  --cc-primary-aa: #A25B06;  /* darkened --primary-color 4.8:1 on white */
+}
+
+.cc-body a:not(.cc-btn),
+.cc-crumbs a { color: var(--cc-accent-aa); }
+
+.cc-eyebrow { color: var(--cc-primary-aa); }
+
+/* footer small print was #cdcece on dark — lift it to clear AA */
+footer .border-top.small { color: rgba(255, 255, 255, 0.88) !important; }
+footer .cc-flinks a,
+footer .list-unstyled a { color: rgba(255, 255, 255, 0.92); text-decoration: none; }
+footer .cc-flinks a:hover { color: var(--primary-color); }
+
+/* breadcrumbs inside the light body area, not the dark hero */
+.cc-body .cc-crumbs { color: var(--cc-muted); }

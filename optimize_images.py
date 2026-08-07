@@ -90,7 +90,9 @@ def main():
         if "thumb" in dp:
             continue
         for f in files:
-            if not f.lower().endswith((".jpg", ".jpeg", ".png")):
+            # PNGs are cut-outs and the logo — leave them alone. Re-encoding
+            # them once flattened alpha to black and broke both images.
+            if not f.lower().endswith((".jpg", ".jpeg")):
                 continue
             p = os.path.join(dp, f)
             key = os.path.relpath(p, IMAGES).replace("\\", "/")
