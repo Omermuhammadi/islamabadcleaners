@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://cleancrew-superclean.vercel.app/sitemap.xml
