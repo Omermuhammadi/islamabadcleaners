@@ -9,8 +9,8 @@ PAGES = {
         "h1": "Window Cleaning in Islamabad &amp; Rawalpindi",
         "title": "Window Cleaning Islamabad & Rawalpindi | Homes & Offices",
         "meta": ("Window cleaning in Islamabad and Rawalpindi for homes and offices. "
-                 "Interior and exterior glass, frames, tracks and sills. Free inspection, "
-                 "fixed price, available 24/7. WhatsApp 0330 2935777."),
+                 "Interior and exterior glass, frames, tracks and sills. Fixed price "
+                 "quoted on WhatsApp, available 24/7. WhatsApp 0330 2935777."),
         "hero_p": ("Streak-free glass inside and out, with the frames, tracks and sills "
                    "done properly rather than ignored. Homes, offices and shopfronts."),
         "h2_intro": "Why windows here get dirty so fast",
@@ -55,7 +55,7 @@ PAGES = {
         ],
         "excluded": [
             "High-rise exterior cleaning requiring rope access, cradles or scaffolding",
-            "Any window that cannot be reached safely — we will tell you at inspection "
+            "Any window that cannot be reached safely — we will tell you upfront "
             "rather than improvise something unsafe",
             "Removal of paint, silicone or cement splashes left by builders — that is "
             "post-construction cleaning",
@@ -68,9 +68,10 @@ PAGES = {
             ("Tell us what you have",
              "Roughly how many windows, how many floors, and whether the exterior is "
              "reachable from balconies or ground level. Photos of the building help."),
-            ("Access check",
-             "We confirm what can be cleaned safely from inside, from balconies, or with "
-             "poles, and tell you plainly if anything is out of reach."),
+            ("Access check and a fixed price on WhatsApp",
+             "From your photos we confirm what can be cleaned safely from inside, from "
+             "balconies, or with poles, tell you plainly if anything is out of reach, "
+             "and send one fixed price in writing before we come."),
             ("Clean glass, frames, tracks, sills",
              "Interior and reachable exterior glass washed and squeegeed, then frames, "
              "tracks and sills done — the parts most cleaners skip."),
@@ -98,9 +99,9 @@ PAGES = {
             ("Do you clean the outside of upper-floor windows?",
              "Where they can be reached safely — from a balcony, terrace, or with extension "
              "poles from a stable position. We do not do rope access or cradle work, and we "
-             "will not improvise something unsafe to reach an awkward pane. At the "
-             "inspection we tell you exactly which windows we can do and which we cannot, "
-             "before you commit to anything."),
+             "will not improvise something unsafe to reach an awkward pane. When you send "
+             "photos of the building we tell you exactly which windows we can do and "
+             "which we cannot, before you commit to anything."),
             ("How often should windows be cleaned?",
              "In these two cities, every two to three months keeps them genuinely clear. "
              "Ground-floor windows facing a road, and anywhere near ongoing construction, "
@@ -423,7 +424,7 @@ PAGES = {
         "title": "Janitorial Services Islamabad & Rawalpindi | Office Cleaning Contracts",
         "meta": ("Janitorial and office cleaning contracts in Islamabad and Rawalpindi. "
                  "Daily, weekly or nightly cleaning staff with supervision, for offices, "
-                 "clinics and retail. Free site visit and fixed monthly price. WhatsApp "
+                 "clinics and retail. Fixed monthly price quoted on WhatsApp. WhatsApp "
                  "0330 2935777."),
         "hero_p": ("Regular cleaning staff and real supervision for offices, clinics and "
                    "retail units — on a schedule you set, with someone accountable for the "
@@ -448,8 +449,8 @@ PAGES = {
             "teams across multiple floors. Because we operate 24 hours a day, the work can "
             "happen before you open, after you close, or through the night."],
         "h2_included": "What a janitorial contract includes",
-        "included_intro": ("Every contract is built from a site visit rather than a fixed "
-                           "package. A typical scope covers the following."),
+        "included_intro": ("Every contract is built around your actual site rather than a "
+                           "fixed package. A typical scope covers the following."),
         "included": [
             "<strong>Written scope of work</strong> — every task listed against a frequency, "
             "so the standard is defined rather than assumed",
@@ -479,10 +480,11 @@ PAGES = {
             "Landscaping and outdoor grounds maintenance",
         ],
         "process": [
-            ("Site visit",
-             "We walk the premises with you, note the areas, floor types, washroom count "
-             "and how the space is actually used, and ask what has gone wrong with previous "
-             "contracts."),
+            ("Tell us about the site",
+             "Message us the area, floor types, washroom count and how the space is "
+             "actually used — photos help — and what has gone wrong with previous "
+             "contracts. For larger sites we can arrange a walk-through first if photos "
+             "are not enough."),
             ("Written proposal",
              "You get a scope of work listing every task and frequency, the staffing, the "
              "hours, and a fixed monthly price. No hourly ambiguity."),
@@ -539,8 +541,8 @@ PAGES = {
              "Our cleaners work unsupervised inside your premises, often outside business "
              "hours, so we treat this seriously and are happy to talk through our vetting "
              "and induction process before you sign anything. If your building has its own "
-             "security clearance requirements, tell us at the site visit and we will work to "
-             "them."),
+             "security clearance requirements, tell us before the contract starts and we "
+             "will work to them."),
             ("Can you also do the deep cleaning and carpets?",
              "Yes, and it is usually cheaper to build them into the contract than to book "
              "them separately. Periodic work like machine floor scrubbing, carpet "
@@ -551,8 +553,9 @@ PAGES = {
         "closing_h2": "Set up a janitorial contract in Islamabad or Rawalpindi",
         "closing": [
             "Tell us the size of your premises, the type of business, and the hours you "
-            "want the cleaning done. We will visit the site free of charge and come back "
-            "with a written scope of work and a fixed monthly price.",
+            "want the cleaning done. We will come back on WhatsApp with a written scope "
+            "of work and a fixed monthly price — and for larger sites we can arrange a "
+            "walk-through first.",
             "WhatsApp us any time — we reply within minutes.",
         ],
     },

@@ -158,8 +158,8 @@ PAGES = {
         "h1": "House Cleaning Services in Islamabad &amp; Rawalpindi",
         "title": "House Cleaning Services in Islamabad & Rawalpindi | CleanCrew",
         "meta": ("House cleaning services in Islamabad & Rawalpindi — full-home "
-                 "cleaning by an equipped crew, one-off or regular. Free inspection, "
-                 "fixed price. WhatsApp 0330 2935777."),
+                 "cleaning by an equipped crew, one-off or regular. Fixed price on "
+                 "WhatsApp 0330 2935777."),
         "hero_p": ("A proper clean of the whole house — kitchens, bathrooms, bedrooms, "
                    "floors and glass — by a trained crew that brings everything. "
                    "One-off, or on a schedule that suits you."),
@@ -189,9 +189,9 @@ PAGES = {
             "The twin cities are hard on a house. Dust comes in year-round, and in "
             "the newer sectors and societies the construction next door never really "
             "finishes. A crew with proper machines gets a full house done in hours — "
-            "not the days it takes one person with a mop — and because we quote after "
-            "seeing the property, the price reflects your actual house, not a "
-            "one-size guess over the phone.",
+            "not the days it takes one person with a mop — and because we quote from "
+            "the details and photos you send, the price reflects your actual house, "
+            "not a one-size guess over the phone.",
         ],
         "included": [
             "<strong>Kitchen</strong> — counters, hob, backsplash and cabinet fronts "
@@ -224,10 +224,13 @@ PAGES = {
         "process": [
             ("Tell us about the house",
              "Marla or square feet, number of bedrooms and bathrooms, your area, "
-             "and whether it is a one-off or you want a regular schedule."),
-            ("Free look, fixed price",
-             "For most homes we visit first, free. One-off cleans get one fixed "
-             "price; regular schedules get a fixed per-visit rate in writing."),
+             "and whether it is a one-off or you want a regular schedule. A few "
+             "photos help us price it right."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two, then one-off cleans get one fixed "
+             "price in writing; regular schedules get a fixed per-visit rate. The "
+             "price does not change on the day unless the house differs from what "
+             "was described."),
             ("A crew, not a cleaner",
              "We size the team to the house so a full clean finishes in hours. "
              "Everything — machines, chemicals, cloths — comes with us."),
@@ -255,8 +258,8 @@ PAGES = {
         "faqs": [
             ("How much does house cleaning cost in Islamabad?",
              "It depends on the size of the house, the number of kitchens and "
-             "bathrooms, and its condition, so we quote after a free visit rather "
-             "than guessing on the phone. You get one fixed number in writing — for "
+             "bathrooms, and its condition, so we quote from the details and photos "
+             "you send on WhatsApp rather than guessing. You get one fixed number in writing — for "
              "a one-off clean, or a per-visit rate if you book a schedule. As a "
              "rule, regular visits work out noticeably cheaper per visit than "
              "one-off cleans."),
@@ -302,9 +305,9 @@ PAGES = {
             "a message and we will confirm straight away."),
         "closing_h2": "Book house cleaning in Islamabad or Rawalpindi",
         "closing": [
-            "WhatsApp us your area, the size of the house and whether you want a "
-            "one-off or a regular schedule. We will arrange a free visit, give you "
-            "a fixed written price, and book a time that suits the family.",
+            "WhatsApp us your area, the size of the house, a few photos and whether "
+            "you want a one-off or a regular schedule. We will send a fixed written "
+            "price on WhatsApp and book a time that suits the family.",
             "We answer messages 24 hours a day, usually within minutes.",
         ],
     },

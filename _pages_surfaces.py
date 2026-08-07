@@ -10,7 +10,7 @@ PAGES = {
         "title": "Marble Polishing Islamabad & Rawalpindi | Floor Grinding & Crystallisation",
         "meta": ("Marble polishing, grinding and crystallisation in Islamabad and "
                  "Rawalpindi. We restore dull, scratched and stained marble floors and "
-                 "stairs. Free inspection, fixed price, 24/7. WhatsApp 0330 2935777."),
+                 "stairs. Fixed price quoted on WhatsApp, 24/7. WhatsApp 0330 2935777."),
         "hero_p": ("Grinding, honing and crystallisation that takes dull, scratched marble "
                    "back to a proper reflective shine — not a coat of polish that wears off "
                    "in a month."),
@@ -38,7 +38,8 @@ PAGES = {
             "this rather than another mop."],
         "h2_included": "What is included in marble restoration",
         "included_intro": ("The exact steps depend on how damaged the stone is. We assess "
-                           "that at inspection and tell you which of these your floor needs."),
+                           "that from your photos and tell you which of these your floor "
+                           "needs."),
         "included": [
             "<strong>Inspection and test patch</strong> — we grind a small area first so you "
             "can see the achievable result before committing to the whole floor",
@@ -73,9 +74,10 @@ PAGES = {
             ("Tell us the area and condition",
              "Roughly how many square feet, which rooms or stairs, and what the problem is "
              "— dull, scratched, stained or etched. Photos help a lot here."),
-            ("Free inspection and test patch",
-             "We look at the stone and normally grind a small test area. That shows you the "
-             "realistic result on your actual floor before you commit to anything."),
+            ("A fixed price on WhatsApp, then a test patch",
+             "From your photos we send one fixed price in writing before we come. On the "
+             "day we grind a small test area first, so you see the realistic result on "
+             "your actual floor before the whole job starts."),
             ("Grind, hone, polish",
              "Working through the diamond grits in stages. Each stage removes the marks of "
              "the one before, which is why skipping stages never produces a proper finish."),
@@ -106,8 +108,9 @@ PAGES = {
              "than the size. A floor that just needs polishing and crystallisation is at "
              "the low end; one that needs full diamond grinding to remove scratches and "
              "level uneven tiles is at the high end because it is several times the work. "
-             "We inspect free of charge and usually do a test patch so you can see the "
-             "result before agreeing a price."),
+             "Send photos of the floor on WhatsApp and we give you one fixed price in "
+             "writing before starting; on the day we do a test patch first so you can see "
+             "the result before the whole floor is done."),
             ("What is the difference between polishing and crystallisation?",
              "Polishing is mechanical — fine abrasives smooth the stone so it reflects "
              "light again. Crystallisation is a chemical and mechanical step that reacts "
@@ -119,7 +122,8 @@ PAGES = {
              "scratches and etch marks disappear. Stains are different. Oil, rust and "
              "organic stains that have soaked into the stone are drawn out with a poultice, "
              "which often improves them dramatically but does not always remove them "
-             "entirely. We tell you at inspection which category yours is in."),
+             "entirely. Send a photo of the stain and we will tell you which category "
+             "yours is in."),
             ("How long does the job take, and can we stay in the house?",
              "A typical room takes a day; a whole house is usually two to four days. The "
              "process is wet and uses heavy machines, so the area being worked on has to be "
@@ -146,8 +150,8 @@ PAGES = {
         "closing_h2": "Book marble polishing in Islamabad or Rawalpindi",
         "closing": [
             "Send us a photo of the floor and tell us roughly how many square feet and "
-            "which area you are in. We will come and inspect free of charge, do a test "
-            "patch so you can see the actual result, and give you a fixed price.",
+            "which area you are in. We will send one fixed price in writing on WhatsApp, "
+            "and start with a test patch so you can see the actual result.",
             "WhatsApp us any time — we reply within minutes.",
         ],
     },
@@ -158,7 +162,7 @@ PAGES = {
         "title": "Tile & Grout Cleaning Islamabad & Rawalpindi | Deep Floor Cleaning",
         "meta": ("Tile and grout cleaning in Islamabad and Rawalpindi. Machine cleaning "
                  "that lifts the discolouration mopping cannot shift, for floors, kitchens "
-                 "and bathrooms. Free inspection, fixed price, 24/7. WhatsApp 0330 2935777."),
+                 "and bathrooms. Fixed price quoted on WhatsApp, 24/7. WhatsApp 0330 2935777."),
         "hero_p": ("Machine cleaning and grout treatment that lifts the dark lines and "
                    "greying no amount of mopping shifts. Floors, kitchens, bathrooms and "
                    "commercial areas."),
@@ -217,9 +221,10 @@ PAGES = {
             ("Tell us the area",
              "Roughly how many square feet, which rooms, tile type if you know it, and "
              "whether the problem is grout darkening, greying tiles or mould."),
-            ("Inspection and test patch",
-             "We clean a small area so you can see exactly how much improvement to expect "
-             "on your actual floor before agreeing anything."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two about your photos, then send one fixed price "
+             "in writing before any work starts. On the day we clean a small test area "
+             "first, so you see the improvement on your actual floor."),
             ("Pre-treat, agitate, extract",
              "Chemical applied and left to dwell, grout lines scrubbed, then hot-water "
              "pressure extraction section by section with edges done by hand."),
@@ -282,8 +287,8 @@ PAGES = {
         "closing_h2": "Book tile and grout cleaning in Islamabad or Rawalpindi",
         "closing": [
             "Send us a photo and tell us roughly how many square feet and which rooms. We "
-            "will inspect free of charge, do a test patch so you can see the difference, "
-            "and give you one fixed price.",
+            "will send one fixed price in writing on WhatsApp, and start with a test "
+            "patch so you can see the difference.",
             "Message us on WhatsApp any time — we reply within minutes.",
         ],
     },
@@ -347,9 +352,10 @@ PAGES = {
             "Daily general cleaning and bin emptying, which is our janitorial service",
         ],
         "process": [
-            ("Site survey",
-             "We visit, identify the floor types, look at how the space is actually used, "
-             "and find where the wear is concentrated."),
+            ("Start on WhatsApp",
+             "Send us the floor types, rough area and how the space is used, with photos "
+             "of the wear. For larger commercial sites we can arrange a survey visit if "
+             "photos are not enough."),
             ("Restore first if needed",
              "If the floor is already worn, it is brought back to a good baseline once. "
              "There is no point maintaining a floor that is already damaged."),
@@ -416,8 +422,9 @@ PAGES = {
         "closing_h2": "Set up floor care in Islamabad or Rawalpindi",
         "closing": [
             "Tell us the floor type, roughly how many square feet, and how the space is "
-            "used. We will survey the site free of charge and come back with a written "
-            "schedule and a fixed price per visit.",
+            "used, with a few photos. We will come back on WhatsApp with a written "
+            "schedule and a fixed price per visit — and for larger commercial sites we "
+            "can arrange a survey first.",
             "WhatsApp us any time — we reply within minutes.",
         ],
     },

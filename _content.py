@@ -80,9 +80,9 @@ ABOUT_BODY = [
     "Islamabad and Rawalpindi. We handle one-off jobs like deep cleans, sofas, "
     "carpets and marble, the deadline work that comes with moving or building, "
     "and regular janitorial contracts for offices and clinics.",
-    "We bring our own equipment and materials to every job, and we quote after "
-    "seeing the property rather than guessing over the phone — so the price we "
-    "give you is the price you pay.",
+    "We bring our own equipment and materials to every job, and we quote in "
+    "writing on WhatsApp from your photos and details — so the price we give "
+    "you is the price you pay.",
 ]
 
 # --- FAQ --------------------------------------------------------------------
@@ -94,15 +94,16 @@ FAQS = [
      "Adiala Road area. Message us if your area isn't listed and we'll tell you "
      "straight away."),
     ("How do I get a price?",
-     "Send us a WhatsApp or call with the service you need, your area, and "
-     "roughly how big the property or item is. For most jobs we then come and "
-     "look at it free of charge and give you a fixed price before any work "
+     "Send us a WhatsApp with the service you need, your area, roughly how "
+     "big the property or item is, and a photo or two if you can. We quote "
+     "right there on WhatsApp — one fixed price in writing before any work "
      "starts."),
     ("Why don't you show prices on the website?",
      "Because the same service can cost very differently depending on size and "
      "condition. A 5-marla house cleaned regularly and a 5-marla house after "
-     "building work are not the same job. We would rather see it and give you "
-     "one accurate number than advertise a low figure and change it on the day."),
+     "building work are not the same job. We would rather quote your actual "
+     "job from your photos and details than advertise a low figure and change "
+     "it on the day."),
     ("Do you bring your own equipment and supplies?",
      "Yes. Machines, chemicals, cloths and everything else comes with the team. "
      "You don't need to provide anything."),

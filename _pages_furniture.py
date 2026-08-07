@@ -10,7 +10,7 @@ PAGES = {
         "title": "Sofa Cleaning Islamabad & Rawalpindi | Sofa Shampoo at Home",
         "meta": ("Professional sofa cleaning in Islamabad and Rawalpindi. Shampoo and "
                  "hot-water extraction at your home for fabric sofas, armchairs and dining "
-                 "chairs. Free inspection, fixed price, 24/7. WhatsApp 0330 2935777."),
+                 "chairs. Fixed price quoted on WhatsApp, 24/7. WhatsApp 0330 2935777."),
         "hero_p": ("Shampoo and hot-water extraction that pulls dirt and smell out of the "
                    "fabric instead of pushing it further in. Done at your home, usually in "
                    "a couple of hours."),
@@ -70,7 +70,8 @@ PAGES = {
         "process": [
             ("Tell us what you have",
              "Number of seats, the fabric if you know it, and any particular stains or "
-             "smells. A photo helps us quote accurately without a visit for smaller jobs."),
+             "smells. A photo on WhatsApp lets us quote accurately — you get one fixed "
+             "price in writing before we come."),
             ("Inspection and honest assessment",
              "We check the fabric and test a hidden patch. If a stain is not going to come "
              "out, we say so before you commit rather than after."),
@@ -103,8 +104,9 @@ PAGES = {
              "Sofa cleaning is normally priced per seat, so the number of seats is the "
              "starting point — a three-seater plus two armchairs counts as five. On top of "
              "that, the fabric type, how dirty it is and whether there are stains or odour "
-             "to treat all affect the price. We give you a fixed figure before starting, "
-             "and for most sofas we can quote from photos without needing a visit first."),
+             "to treat all affect the price. Send photos on WhatsApp and we give you one "
+             "fixed figure in writing before starting — it does not change on the day "
+             "unless the sofa differs from the photos."),
             ("How long does a sofa take to dry?",
              "Usually four to six hours with the air movers we use, and often faster in "
              "Islamabad's drier months. It will feel slightly damp to the touch when we "
@@ -141,8 +143,8 @@ PAGES = {
         "closing_h2": "Book sofa cleaning in Islamabad or Rawalpindi",
         "closing": [
             "Send us a photo of the sofa and tell us how many seats and which area you are "
-            "in. We will come back with a fixed price, usually without needing a visit "
-            "first, and can often fit you in the same day.",
+            "in. We will come back with one fixed price in writing on WhatsApp, and can "
+            "often fit you in the same day.",
             "WhatsApp us any time — we reply within minutes.",
         ],
     },
@@ -153,7 +155,7 @@ PAGES = {
         "title": "Carpet Cleaning Islamabad & Rawalpindi | Rug & Carpet Shampoo",
         "meta": ("Professional carpet and rug cleaning in Islamabad and Rawalpindi. Deep "
                  "extraction, stain treatment and controlled drying, at your home or "
-                 "office. Free inspection, fixed price, 24/7. WhatsApp 0330 2935777."),
+                 "office. Fixed price quoted on WhatsApp, 24/7. WhatsApp 0330 2935777."),
         "hero_p": ("Deep extraction that lifts embedded grit and stains out of the pile, "
                    "with controlled drying so nothing is left damp. Wall-to-wall carpet, "
                    "rugs and office flooring."),
@@ -286,7 +288,7 @@ PAGES = {
         "title": "Mattress Cleaning Islamabad & Rawalpindi | Deep Sanitising at Home",
         "meta": ("Mattress cleaning and sanitising in Islamabad and Rawalpindi. Deep "
                  "extraction that removes dust mites, sweat residue and allergens from "
-                 "inside the mattress. Free inspection, fixed price, 24/7. WhatsApp "
+                 "inside the mattress. Fixed price quoted on WhatsApp, 24/7. WhatsApp "
                  "0330 2935777."),
         "hero_p": ("Deep extraction and sanitising that pulls sweat residue, dust mites and "
                    "allergens out of the layers you sleep on. Done at your home, dry the "

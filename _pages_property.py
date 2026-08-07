@@ -13,7 +13,7 @@ PAGES = {
         "title": "Post Construction Cleaning Islamabad & Rawalpindi | New Build Cleaning",
         "meta": ("Post-construction cleaning in Islamabad and Rawalpindi. We remove cement "
                  "dust, paint spots, silicone and stickers from new builds in DHA, Bahria "
-                 "Town, Bahria Enclave and Gulberg. Free inspection, fixed price, 24/7. "
+                 "Town, Bahria Enclave and Gulberg. Fixed price on WhatsApp, 24/7. "
                  "WhatsApp 0330 2935777."),
         "hero_p": ("Cement dust in every crack, paint and adhesive on the tiles, silicone "
                    "smeared across the glass, protective film still on the fittings. We "
@@ -85,10 +85,12 @@ PAGES = {
              "Message us the size in marla or square feet, how many floors, whether it is "
              "residential or commercial, and how far along the builders are. Photos are "
              "genuinely useful here — the amount of dust and debris changes the job a lot."),
-            ("Free site visit",
-             "For post-construction we almost always visit first. The difference between a "
-             "site that has been roughly swept and one that has not is several hours of "
-             "work, and we would rather see it than guess."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two, then send one fixed price in writing before "
+             "any work starts. The difference between a site that has been roughly swept "
+             "and one that has not is several hours of work, so good photos matter — and "
+             "for large handovers we can arrange a site visit first if photos are not "
+             "enough."),
             ("Staged clean",
              "Debris out first, then a full dust extraction from ceiling down, then spot "
              "removal of paint, silicone and adhesive, then glass and fittings, and finally "
@@ -118,8 +120,9 @@ PAGES = {
             ("How much does post-construction cleaning cost in Islamabad?",
              "It depends mainly on the size of the property, how many floors it has, and "
              "how much debris and paint the builders left behind. Because those vary so "
-             "much between sites, we do not publish a fixed rate — we visit free of charge, "
-             "look at the actual condition, and give you one fixed price before starting. "
+             "much between sites, we do not publish a fixed rate — send photos of the "
+             "actual condition on WhatsApp and we give you one fixed price in writing "
+             "before starting. "
              "A tidy handover costs considerably less than a site that has not been touched."),
             ("How long does it take?",
              "A small apartment can be done in a day. A large house usually takes two to "
@@ -141,8 +144,8 @@ PAGES = {
              "We remove cleaning waste, packaging, offcuts, empty containers and general "
              "builder's rubbish as part of the job. What we do not do is haul away large "
              "structural debris or rubble that needs a truck and a skip — if there is a lot "
-             "of that, it should be cleared before we arrive, and we will tell you at the "
-             "site visit if that is the case."),
+             "of that, it should be cleared before we arrive, and we will tell you from "
+             "your photos if that is the case."),
             ("Will the dust come back after you have cleaned?",
              "Not if the job is done properly. The reason dust seems to reappear is that a "
              "single pass lifts fine particles into the air, which then settle over the "
@@ -158,8 +161,8 @@ PAGES = {
         ],
         "closing_h2": "Book post-construction cleaning in Islamabad or Rawalpindi",
         "closing": [
-            "Send us the property size, the area, and the date you need it ready. We will "
-            "come and look at the site free of charge, give you one fixed price, and work "
+            "Send us the property size, the area, photos of the site and the date you "
+            "need it ready. We will send one fixed price in writing on WhatsApp, and work "
             "to your handover deadline including nights and weekends.",
             "We answer WhatsApp messages around the clock, usually within minutes.",
         ],
@@ -171,7 +174,7 @@ PAGES = {
         "title": "Post Renovation Cleaning Islamabad & Rawalpindi | After Remodelling",
         "meta": ("Post-renovation cleaning in Islamabad and Rawalpindi. Fine dust, paint "
                  "spots and debris removed after remodelling — including the rooms the "
-                 "builders sealed off. Free inspection, fixed price, 24/7. WhatsApp "
+                 "builders sealed off. Fixed price quoted on WhatsApp, 24/7. WhatsApp "
                  "0330 2935777."),
         "hero_p": ("Renovating one room spreads dust through the whole house. We clean the "
                    "work area and the rooms around it, so you get your home back rather "
@@ -230,10 +233,13 @@ PAGES = {
         "process": [
             ("Tell us what was renovated",
              "Message us which rooms were worked on, what kind of work it was, how big the "
-             "property is and whether you are living there during the job."),
-            ("Free inspection",
-             "We look at the worked-on area and, just as importantly, how far the dust has "
-             "travelled. That is what actually determines the size of the job."),
+             "property is and whether you are living there during the job. Send photos of "
+             "the worked-on area and, just as importantly, the rooms the dust reached — "
+             "that is what actually determines the size of the job."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two about the photos, then send one fixed price in "
+             "writing before any work starts. It does not change on the day unless the "
+             "job turns out different from what was described."),
             ("Protect, then clean outward",
              "We cover what needs protecting, clean the renovated area first, then work "
              "outward through the affected rooms so dust is never pushed back into a room "
@@ -245,7 +251,7 @@ PAGES = {
         "price_factors": [
             ("How many rooms were affected",
              "Not just the renovated room — the honest measure is how far the dust "
-             "actually travelled, which we assess at the visit."),
+             "actually travelled, which is why photos of the surrounding rooms help."),
             ("Type of work done",
              "Wall chasing, tile cutting and sanding produce far more fine dust than "
              "fitting a new kitchen or repainting."),
@@ -281,8 +287,8 @@ PAGES = {
             ("Will you move our furniture?",
              "We move what two people can shift safely and clean behind it. Heavy wardrobes, "
              "large beds and appliances we clean around rather than risk damaging them or "
-             "the floor. If you want something specific moved, mention it at the inspection "
-             "and we will tell you whether we can."),
+             "the floor. If you want something specific moved, mention it when you message "
+             "us and we will tell you whether we can."),
             ("Do you clean the curtains and sofas too?",
              "We vacuum curtains, upholstery and rugs in the affected rooms as part of the "
              "job, which removes the settled dust. If the fabric needs proper wet cleaning "
@@ -292,8 +298,8 @@ PAGES = {
         "closing_h2": "Book post-renovation cleaning in Islamabad or Rawalpindi",
         "closing": [
             "Tell us which rooms were worked on, what kind of work it was and where you "
-            "are. We will come and look, give you one fixed price, and schedule around you "
-            "living there.",
+            "are, with a few photos. We will send one fixed price in writing on WhatsApp "
+            "and schedule around you living there.",
             "Messages answered 24 hours a day, usually within minutes.",
         ],
     },
@@ -304,7 +310,7 @@ PAGES = {
         "title": "Move In Cleaning Islamabad & Rawalpindi | Clean Before You Move",
         "meta": ("Move-in cleaning in Islamabad and Rawalpindi. A full clean of an empty "
                  "house or apartment before your furniture arrives — cupboards, kitchen, "
-                 "bathrooms and floors. Free inspection, fixed price, 24/7. WhatsApp "
+                 "bathrooms and floors. Fixed price quoted on WhatsApp, 24/7. WhatsApp "
                  "0330 2935777."),
         "hero_p": ("The one chance to clean a property properly is while it is still empty. "
                    "Cupboards, kitchen, bathrooms and floors done before a single box "
@@ -362,10 +368,13 @@ PAGES = {
         "process": [
             ("Send us the details",
              "Property size in marla or square feet, number of bedrooms and bathrooms, the "
-             "area, and the date your furniture arrives."),
-            ("Free inspection",
-             "We look at the actual condition the previous occupants left it in, which is "
-             "what determines the price far more than the size does."),
+             "area, and the date your furniture arrives. Add a few photos — the condition "
+             "the previous occupants left it in determines the price far more than the "
+             "size does."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two, then send one fixed price in writing before "
+             "any work starts. The price does not change on the day unless the property "
+             "differs from what was described."),
             ("We clean the empty property",
              "Top down, room by room, with everything opened up — cupboards, wardrobes and "
              "storage cleaned internally while there is still access."),
@@ -421,9 +430,9 @@ PAGES = {
         ],
         "closing_h2": "Book a move-in clean in Islamabad or Rawalpindi",
         "closing": [
-            "Send us the property size, your area and the date the movers are coming. We "
-            "will inspect free of charge, give you one fixed price, and have it finished "
-            "before your first box arrives.",
+            "Send us the property size, your area, a few photos and the date the movers "
+            "are coming. We will send one fixed price in writing on WhatsApp and have it "
+            "finished before your first box arrives.",
             "We reply to WhatsApp messages within minutes, any time of day.",
         ],
     },
@@ -433,8 +442,8 @@ PAGES = {
         "h1": "Move-Out Cleaning in Islamabad &amp; Rawalpindi",
         "title": "Move Out Cleaning Islamabad & Rawalpindi | End of Tenancy Cleaning",
         "meta": ("Move-out and end-of-tenancy cleaning in Islamabad and Rawalpindi. Hand "
-                 "the property back in the condition the landlord or agent expects. Free "
-                 "inspection, fixed price, available 24/7. WhatsApp 0330 2935777."),
+                 "the property back in the condition the landlord or agent expects. Fixed "
+                 "price on WhatsApp, available 24/7. WhatsApp 0330 2935777."),
         "hero_p": ("Hand the property back the way it was given to you. We do the "
                    "end-of-tenancy clean that landlords and agents actually inspect for — "
                    "cupboards, kitchen, bathrooms, floors and marks."),
@@ -491,11 +500,12 @@ PAGES = {
         "process": [
             ("Tell us the property and the date",
              "Size, number of bedrooms and bathrooms, your area, whether it will be empty, "
-             "and when the inspection or handover is."),
-            ("Free inspection",
-             "We look at the condition and flag anything that cleaning will not fix — marks "
-             "that are actually damage, for instance — so you know before the landlord "
-             "tells you."),
+             "and when the inspection or handover is. A few photos of the kitchen and "
+             "bathrooms help us price it accurately."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two, then send one fixed price in writing before "
+             "any work starts. If your photos show marks that are actually damage rather "
+             "than dirt, we will say so — so you know before the landlord tells you."),
             ("The clean",
              "Worked in the order an inspection follows: kitchen and bathrooms first, "
              "because that is where deductions come from, then storage, marks, dusting and "
@@ -526,8 +536,8 @@ PAGES = {
              "what gets inspected — kitchen units inside and out, extractor, hob "
              "surroundings, bathroom scale, wardrobe interiors, marks on walls and doors, "
              "and floors. What cleaning cannot fix is actual damage: holes, burns, broken "
-             "fittings or stains that have gone through the finish. We will tell you at the "
-             "inspection if we see anything in that category."),
+             "fittings or stains that have gone through the finish. We will tell you "
+             "straight away if we see anything in that category."),
             ("Should the property be empty when you clean?",
              "Ideally yes. An empty property is quicker, cheaper and gets a noticeably "
              "better result, and it also means we can clean inside all the storage. If your "
@@ -554,9 +564,9 @@ PAGES = {
         ],
         "closing_h2": "Book a move-out clean in Islamabad or Rawalpindi",
         "closing": [
-            "Tell us the property size, your area and when the handover inspection is. We "
-            "will inspect free of charge, give you one fixed price, and work to your date "
-            "including evenings and weekends.",
+            "Tell us the property size, your area and when the handover inspection is, "
+            "with a few photos. We will send one fixed price in writing on WhatsApp and "
+            "work to your date including evenings and weekends.",
             "WhatsApp us any time — we reply within minutes.",
         ],
     },

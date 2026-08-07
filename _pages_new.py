@@ -11,7 +11,7 @@ PAGES = {
         "h1": "Water Tank Cleaning in Islamabad &amp; Rawalpindi",
         "title": "Water Tank Cleaning in Islamabad & Rawalpindi | Overhead & Underground Tanks",
         "meta": ("Water tank cleaning in Islamabad & Rawalpindi. Overhead & underground "
-                 "tanks scrubbed and disinfected. Free inspection, 24/7. "
+                 "tanks scrubbed and disinfected. Fixed price on WhatsApp, 24/7. "
                  "WhatsApp 0330 2935777."),
         "hero_p": ("Overhead and underground water tanks emptied, scrubbed down to the "
                    "walls and floor, then disinfected — so the water your family drinks "
@@ -78,17 +78,19 @@ PAGES = {
             "certified testing of the supply itself is a separate specialist service",
             "Unblocking of supply or drainage lines",
             "Cleaning of tanks that are structurally unsafe to enter — we will tell "
-            "you at inspection if a tank cannot be worked in safely",
+            "you on the day if a tank cannot be worked in safely",
         ],
         "process": [
             ("Tell us about your tanks",
              "Send a WhatsApp with how many tanks you have, roughly what size, whether "
              "they are overhead or underground, plastic or concrete, and your area. If "
-             "you do not know the sizes, that is fine — the free inspection covers it."),
-            ("Inspection and quote",
-             "We look at the tanks, check access and condition, and give you one fixed "
-             "price for the job. We will also tell you honestly if a tank is in good "
-             "enough condition that it can wait."),
+             "you do not know the sizes, that is fine — a photo of each tank is "
+             "usually enough for us to judge."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two, then send one fixed price in writing "
+             "before any work starts — and it does not change on the day unless the "
+             "tanks differ from what you described. If a tank is in good enough "
+             "condition that it can wait, we will say so honestly."),
             ("Drain, scrub, disinfect",
              "We time the job so you are without water for as short a period as "
              "possible — usually a few hours. The tank is drained, the sludge removed, "
@@ -123,8 +125,8 @@ PAGES = {
              "It depends on how many tanks you have, their capacity, whether they are "
              "overhead or underground, and the condition inside — a tank cleaned last "
              "year is a very different job from one untouched for a decade. We do not "
-             "quote blind: we inspect free of charge, look inside the tanks, and give "
-             "you one fixed price before any work starts. For most houses, cleaning "
+             "quote blind: send the tank details and a photo or two on WhatsApp and "
+             "we give you one fixed price in writing before any work starts. For most houses, cleaning "
              "both tanks together costs less than booking them separately, so we "
              "usually recommend doing the pair in one visit."),
             ("How often should overhead and underground tanks be cleaned?",
@@ -163,10 +165,10 @@ PAGES = {
              "Not reliably, and neither can you — which is exactly the problem with "
              "tanks. The useful signs are indirect: sediment settling in a glass of "
              "water left standing, a smell from the taps after the water has been off, "
-             "or brown staining in cisterns and around fittings. The honest answer is "
-             "that the inspection takes minutes and costs nothing, so rather than "
-             "guessing, let us open the lid and look. If it does not need cleaning "
-             "yet, we will say so."),
+             "or brown staining in cisterns and around fittings. If you can lift the "
+             "lid safely, a quick photo of the inside sent on WhatsApp tells us "
+             "everything we need — and if the tank does not need cleaning yet, we "
+             "will say so rather than clean it for the sake of it."),
             ("Do you clean tanks for offices, plazas and apartment buildings?",
              "Yes. Commercial and shared tanks are a big part of this work — plazas "
              "in Blue Area and Saddar, apartment buildings in E-11 and Bahria Town, "
@@ -191,8 +193,8 @@ PAGES = {
         "closing_h2": "Book a water tank clean in Islamabad or Rawalpindi",
         "closing": [
             "Send us a WhatsApp with your area, how many tanks you have and roughly "
-            "their size if you know it. We will arrange a free inspection, look "
-            "inside the tanks, and give you one fixed price for the job.",
+            "their size if you know it — a photo of each tank helps. We will send "
+            "one fixed price in writing for the job before any work starts.",
             "We answer messages 24 hours a day, and in most cases you will hear back "
             "within minutes.",
         ],
@@ -203,8 +205,8 @@ PAGES = {
         "h1": "Swimming Pool Cleaning in Islamabad &amp; Rawalpindi",
         "title": "Swimming Pool Cleaning in Islamabad & Rawalpindi | Green Pool Recovery & Weekly Service",
         "meta": ("Swimming pool cleaning in Islamabad & Rawalpindi. Green pool "
-                 "recovery after monsoon, weekly service, water balancing. Free "
-                 "inspection. WhatsApp 0330 2935777."),
+                 "recovery after monsoon, weekly service, water balancing. Fixed "
+                 "price on WhatsApp. WhatsApp 0330 2935777."),
         "hero_p": ("From a green, algae-filled pool brought back to swimmable, to a "
                    "weekly service that keeps it that way — vacuuming, filters, "
                    "skimming and properly balanced water."),
@@ -279,12 +281,12 @@ PAGES = {
              "Send a WhatsApp with the approximate pool size, whether it is "
              "currently clear, cloudy or green, and your area. A photo of the water "
              "tells us more than a paragraph — send one if you can."),
-            ("Inspection and quote",
-             "We look at the water, the filter and the equipment, and quote either a "
-             "one-off restoration or a weekly service, whichever the pool actually "
-             "needs. If the water is too far gone and needs a drain and acid wash, "
-             "we say so upfront rather than selling you chemical treatments that "
-             "will not work."),
+            ("You get a fixed price on WhatsApp",
+             "From your photo and details we quote either a one-off restoration or "
+             "a weekly service, whichever the pool actually needs — one fixed price "
+             "in writing before we start. If the water is too far gone and needs a "
+             "drain and acid wash, we say so upfront rather than selling you "
+             "chemical treatments that will not work."),
             ("Restore or service",
              "A green pool gets shocked, brushed, vacuumed to waste and rebalanced — "
              "sometimes over two or three visits as the water clears. A maintained "
@@ -323,9 +325,9 @@ PAGES = {
              "weekly service on a monthly rate is the cheapest way to run a pool. A "
              "green pool restoration costs more because it involves shock chemicals, "
              "repeated brushing and vacuuming, and often two or three visits before "
-             "the water is fully clear. We inspect free of charge and give you a "
-             "fixed price for a restoration, or a fixed monthly rate for ongoing "
-             "service, before anything starts."),
+             "the water is fully clear. Send a photo of the water on WhatsApp and "
+             "we give you a fixed price for a restoration, or a fixed monthly rate "
+             "for ongoing service, in writing before anything starts."),
             ("My pool has turned green after the rains — can it be saved?",
              "Almost always, yes. Monsoon algae blooms look dramatic but respond "
              "well to a proper shock treatment followed by brushing and vacuuming "
@@ -333,8 +335,9 @@ PAGES = {
              "and possibly more than one visit — the water clears in stages, not "
              "hours. The only pools we recommend draining are ones that have been "
              "green for months with heavy debris rotting on the floor; in that case "
-             "an acid wash is more honest than an endless chemical battle, and we "
-             "will tell you which situation yours is at the inspection."),
+             "an acid wash is more honest than an endless chemical battle, and a "
+             "photo of the water and the pool floor tells us which situation yours "
+             "is."),
             ("How often does a pool need cleaning here?",
              "Through summer and monsoon — roughly April to September — weekly at "
              "minimum, and twice weekly for heavily used pools or those under trees. "
@@ -373,9 +376,10 @@ PAGES = {
              "chlorine consumption and stricter hygiene requirements than a family "
              "pool. We service these on fixed schedules, keep the water tested and "
              "balanced, and can time visits for early mornings before opening so "
-             "guests never see the work happening. If your pool serves paying "
-             "customers, a documented regular service is also your answer when "
-             "anyone asks how the water is maintained."),
+             "guests never see the work happening. For commercial pools we can "
+             "arrange a site visit first if photos are not enough to quote from. "
+             "If your pool serves paying customers, a documented regular service "
+             "is also your answer when anyone asks how the water is maintained."),
             ("Can you get my pool ready before an event or for summer opening?",
              "Yes — pre-summer openings and pre-event calls are our two busiest "
              "kinds of pool booking. The one thing we ask is time: if the pool has "
@@ -393,9 +397,9 @@ PAGES = {
         "closing_h2": "Book pool cleaning in Islamabad or Rawalpindi",
         "closing": [
             "Send us a WhatsApp with your area, the approximate pool size and a "
-            "photo of the water as it looks now. We will arrange a free inspection "
-            "and quote either a one-off restoration or a fixed monthly service — "
-            "whichever the pool actually needs.",
+            "photo of the water as it looks now. We will quote either a one-off "
+            "restoration or a fixed monthly service in writing — whichever the "
+            "pool actually needs.",
             "We answer messages 24 hours a day, and in most cases you will hear "
             "back within minutes.",
         ],
@@ -406,8 +410,8 @@ PAGES = {
         "h1": "Rug Cleaning in Islamabad &amp; Rawalpindi",
         "title": "Rug Cleaning in Islamabad & Rawalpindi | Qaleen & Oriental Rug Washing",
         "meta": ("Rug cleaning in Islamabad & Rawalpindi. Qaleen, oriental and "
-                 "machine-made rugs colour-tested, at home or with pickup. Free "
-                 "inspection. WhatsApp 0330 2935777."),
+                 "machine-made rugs colour-tested, at home or with pickup. Fixed "
+                 "price on WhatsApp. WhatsApp 0330 2935777."),
         "hero_p": ("Careful cleaning for qaleen, oriental and machine-made rugs — "
                    "colour-tested before anything touches the pile, cleaned at your "
                    "home or collected, and dried properly so the backing never stays "
@@ -492,12 +496,13 @@ PAGES = {
             ("Tell us about the rug",
              "Send a WhatsApp with the rug's approximate size, what you know about "
              "it — hand-knotted or machine-made, wool or silk — and a photo. Photos "
-             "of any stains help us give a realistic answer before we visit."),
-            ("Inspect and test",
-             "We identify the fibre and construction and test a hidden corner for "
-             "colour-fastness. Based on that, we tell you whether the rug should be "
-             "cleaned at home or collected for a full wash, and give you one fixed "
-             "price either way."),
+             "of any stains help us give a realistic answer before we quote."),
+            ("You get a fixed price on WhatsApp",
+             "From your photos we tell you whether the rug is best cleaned at home "
+             "or collected for a full wash, and send one fixed price in writing "
+             "either way. On the day we identify the fibre and construction and "
+             "test a hidden corner for colour-fastness before anything touches the "
+             "visible pile."),
             ("Clean the right way for that rug",
              "Delicate pieces get gentle chemistry and controlled moisture; sturdy "
              "machine-made rugs get a deeper wash. Fringes are done separately, and "
@@ -533,9 +538,9 @@ PAGES = {
              "clean than a fine hand-knotted wool or silk piece of the same size, "
              "which needs gentler chemistry and slower work. Whether the rug is "
              "cleaned at home or collected for a full wash also affects the price. "
-             "We inspect the rug — free of charge — and give you one fixed price "
-             "before anything starts, and if you have several rugs, one booking for "
-             "all of them costs less than doing them separately."),
+             "Send photos of the rug on WhatsApp and we give you one fixed price "
+             "in writing before anything starts, and if you have several rugs, one "
+             "booking for all of them costs less than doing them separately."),
             ("Can you clean the rug at home or do you take it away?",
              "Both, and the rug decides which. Sturdy machine-made and most wool "
              "rugs in reasonable condition can be cleaned in place at your home "
@@ -543,8 +548,8 @@ PAGES = {
              "deeper wash — heavy soiling, pet accidents, odour in the foundation — "
              "and delicate pieces that need careful drying are better collected, "
              "washed at our facility, dried fully and returned. We tell you which "
-             "your rug needs at the inspection, with the reasons, and collection "
-             "includes pickup and delivery back to your door."),
+             "your rug needs when you send the photos, with the reasons, and "
+             "collection includes pickup and delivery back to your door."),
             ("Will the colours run?",
              "This is the right question to ask, and the reason we test before we "
              "clean. Some rugs — particularly older pieces and some Afghan and "
@@ -606,9 +611,9 @@ PAGES = {
         "closing_h2": "Book rug cleaning in Islamabad or Rawalpindi",
         "closing": [
             "Send us a WhatsApp with your area, the number and rough sizes of the "
-            "rugs, and a photo or two. We will arrange a free inspection, test the "
-            "rugs, and give you one fixed price — including pickup and delivery if "
-            "the rugs need a full wash.",
+            "rugs, and a photo or two. We will send one fixed price in writing — "
+            "including pickup and delivery if the rugs need a full wash — before "
+            "anything starts.",
             "We answer messages 24 hours a day, and in most cases you will hear "
             "back within minutes.",
         ],
@@ -619,8 +624,8 @@ PAGES = {
         "h1": "Office Chair Cleaning in Islamabad &amp; Rawalpindi",
         "title": "Office Chair Cleaning in Islamabad & Rawalpindi | Mesh, Fabric & Leather Chairs",
         "meta": ("Office chair cleaning in Islamabad & Rawalpindi. Mesh, fabric & "
-                 "leather chairs cleaned in batches after hours. Free "
-                 "inspection. WhatsApp 0330 2935777."),
+                 "leather chairs cleaned in batches after hours. Fixed "
+                 "price on WhatsApp. WhatsApp 0330 2935777."),
         "hero_p": ("Mesh, fabric and leather office chairs deep cleaned where they "
                    "stand — singly or in batches of fifty — with extraction cleaning "
                    "scheduled outside your working hours."),
@@ -687,7 +692,7 @@ PAGES = {
             "we will flag broken chairs we find in a batch, but we do not repair them",
             "Re-upholstery, foam replacement or fixing torn fabric and split seams",
             "Guaranteed removal of ink that has spread through fabric, bleach marks "
-            "or permanent dye stains — we tell you at inspection what will and will "
+            "or permanent dye stains — we tell you upfront what will and will "
             "not come out",
             "Workstation, desk and partition cleaning, unless booked alongside as "
             "part of an office deep clean",
@@ -701,11 +706,12 @@ PAGES = {
              "Send a WhatsApp with roughly how many chairs, what they are — mesh, "
              "fabric, leather or a mix — and your location. For offices, a photo of "
              "a typical chair and the worst chair tells us most of what we need."),
-            ("Inspection and one fixed price",
-             "For office batches we visit, look at the actual chairs, and quote a "
-             "fixed per-chair or per-batch price. We will also tell you which "
-             "chairs are beyond cleaning, so you are not paying to clean a chair "
-             "that needs replacing."),
+            ("One fixed price on WhatsApp",
+             "From your photos and the chair count we quote a fixed per-chair or "
+             "per-batch price in writing before any work starts — for very large "
+             "batches we can look at the chairs on site first if photos are not "
+             "enough. We will also tell you which chairs are beyond cleaning, so "
+             "you are not paying to clean a chair that needs replacing."),
             ("We clean outside your working hours",
              "The team comes in the evening, overnight or at the weekend with all "
              "machines and materials, sorts the chairs by type, and works through "
@@ -743,10 +749,10 @@ PAGES = {
              "bigger — a one-off home office chair is priced differently from a "
              "hundred-chair floor done overnight. The material mix matters too, "
              "since fabric chairs take longer than mesh, and condition matters "
-             "most of all. For offices we visit free of charge, look at the actual "
-             "chairs, and give you one fixed quote for the batch. For one or two "
-             "chairs at home, clear photos are usually enough for us to quote over "
-             "WhatsApp without a visit."),
+             "most of all. Send a photo of a typical chair and the worst chair "
+             "along with the count, and we give you one fixed quote for the batch "
+             "in writing on WhatsApp — for very large offices we can arrange to "
+             "see the chairs first if photos are not enough."),
             ("Do you clean fabric and mesh office chairs?",
              "Yes, both — and differently, which matters. Fabric seats and "
              "backrests get shampoo and hot-water extraction, the same process "
@@ -788,9 +794,9 @@ PAGES = {
              "transformation on a light-coloured chair is usually dramatic. What "
              "we cannot promise is ink that has spread through the fibre, bleach "
              "spots, or dye stains that have chemically changed the fabric "
-             "colour. At the inspection we will point out which chairs fall into "
-             "which category, so the quote reflects reality and you are not "
-             "paying us to attempt the impossible."),
+             "colour. From your photos, and again before we start, we will point "
+             "out which chairs fall into which category, so the quote reflects "
+             "reality and you are not paying us to attempt the impossible."),
             ("How many chairs can you do in one night?",
              "A standard team works through forty to sixty mixed chairs in an "
              "overnight session, including drying time — more if the batch is "
@@ -818,9 +824,9 @@ PAGES = {
         "closing_h2": "Book office chair cleaning in Islamabad or Rawalpindi",
         "closing": [
             "Send us a WhatsApp with your area, roughly how many chairs, and what "
-            "they are made of — a photo of one or two chairs helps. For offices we "
-            "will arrange a free inspection and quote the batch at a fixed price, "
-            "with the work scheduled outside your working hours.",
+            "they are made of — a photo of one or two chairs helps. We will quote "
+            "the batch at one fixed price in writing, with the work scheduled "
+            "outside your working hours.",
             "We answer messages 24 hours a day, and in most cases you will hear "
             "back within minutes.",
         ],

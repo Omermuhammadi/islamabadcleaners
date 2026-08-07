@@ -44,24 +44,24 @@ WA_GENERIC_URL = wa_url(S.WA_GENERIC)
 # Handcrafted meta descriptions, <=160 chars (the long-form dict metas exceed
 # Google's snippet length; these override them for the meta/og tags).
 META = {
-    "deep-cleaning": "Professional deep cleaning for homes & offices in Islamabad & Rawalpindi. Free inspection, one fixed price, open 24/7. WhatsApp 0330 2935777.",
-    "post-construction-cleaning": "Post-construction cleaning in Islamabad & Rawalpindi — cement dust, paint spots & debris cleared for handover. Free inspection. WhatsApp 0330 2935777.",
+    "deep-cleaning": "Professional deep cleaning for homes & offices in Islamabad & Rawalpindi. Fixed WhatsApp quote, one price, open 24/7. WhatsApp 0330 2935777.",
+    "post-construction-cleaning": "Post-construction cleaning in Islamabad & Rawalpindi — cement dust, paint spots & debris cleared for handover. Fixed WhatsApp quote. 0330 2935777.",
     "post-renovation-cleaning": "Post-renovation cleaning in Islamabad & Rawalpindi — fine dust and residue removed after remodelling. Fixed quote, 24/7. WhatsApp 0330 2935777.",
-    "move-in-cleaning": "Move-in cleaning in Islamabad & Rawalpindi — the empty house cleaned properly before you unpack. Free inspection, fixed price. WhatsApp 0330 2935777.",
+    "move-in-cleaning": "Move-in cleaning in Islamabad & Rawalpindi — the empty house cleaned properly before you unpack. Fixed price on WhatsApp. 0330 2935777.",
     "move-out-cleaning": "Move-out & end-of-tenancy cleaning in Islamabad & Rawalpindi, done to handover standard. Fixed written quote, 24/7. WhatsApp 0330 2935777.",
     "sofa-cleaning": "Sofa cleaning at home in Islamabad & Rawalpindi — shampoo & hot-water extraction for sofas, armchairs & dining chairs. WhatsApp 0330 2935777.",
     "carpet-cleaning": "Carpet cleaning in Islamabad & Rawalpindi — deep extraction, stain treatment and controlled drying at your home or office. WhatsApp 0330 2935777.",
     "rug-cleaning": "Rug cleaning in Islamabad & Rawalpindi — qaleen, oriental & machine-made rugs washed safely, at home or by pickup. WhatsApp 0330 2935777.",
-    "mattress-cleaning": "Mattress cleaning in Islamabad & Rawalpindi — dust, allergens and stains extracted from the layers. Free inspection, 24/7. WhatsApp 0330 2935777.",
+    "mattress-cleaning": "Mattress cleaning in Islamabad & Rawalpindi — dust, allergens and stains extracted from the layers. Fixed WhatsApp quote, 24/7. 0330 2935777.",
     "office-chair-cleaning": "Office chair cleaning in Islamabad & Rawalpindi — mesh, fabric & leather chairs cleaned in batches, overnight if needed. WhatsApp 0330 2935777.",
     "marble-polishing": "Marble polishing in Islamabad & Rawalpindi — grinding, honing and polishing that restores dull floors and stairs. Fixed quote. WhatsApp 0330 2935777.",
-    "tile-cleaning": "Tile & grout cleaning in Islamabad & Rawalpindi — machine cleaning for discoloured tiles mopping can't fix. Free inspection. WhatsApp 0330 2935777.",
+    "tile-cleaning": "Tile & grout cleaning in Islamabad & Rawalpindi — machine cleaning for discoloured tiles mopping can't fix. Fixed WhatsApp quote. 0330 2935777.",
     "floor-care": "Floor care in Islamabad & Rawalpindi — scrubbing, buffing and sealing that keeps hard floors in condition. Fixed quote, 24/7. WhatsApp 0330 2935777.",
     "window-cleaning": "Window cleaning in Islamabad & Rawalpindi — glass, frames, tracks and sills, inside and out, streak-free. Fixed quote, 24/7. WhatsApp 0330 2935777.",
     "glass-cleaning": "Glass cleaning in Islamabad & Rawalpindi — facades, partitions, railings & shower screens, hard-water marks removed. WhatsApp 0330 2935777.",
-    "solar-panel-cleaning": "Solar panel cleaning in Islamabad & Rawalpindi — safe removal of the dust layer cutting your output. Free inspection, 24/7. WhatsApp 0330 2935777.",
+    "solar-panel-cleaning": "Solar panel cleaning in Islamabad & Rawalpindi — safe removal of the dust layer cutting your output. Fixed WhatsApp quote, 24/7. 0330 2935777.",
     "water-tank-cleaning": "Water tank cleaning in Islamabad & Rawalpindi — overhead & underground tanks emptied, scrubbed and disinfected. Fixed quote. WhatsApp 0330 2935777.",
-    "swimming-pool-cleaning": "Swimming pool cleaning in Islamabad & Rawalpindi — green-pool restoration and regular weekly service. Free site visit. WhatsApp 0330 2935777.",
+    "swimming-pool-cleaning": "Swimming pool cleaning in Islamabad & Rawalpindi — green-pool restoration and regular weekly service. Fixed WhatsApp quote. 0330 2935777.",
     "janitorial-services": "Janitorial services in Islamabad & Rawalpindi — trained recurring cleaning staff with supervision for offices & clinics. WhatsApp 0330 2935777.",
 }
 
@@ -125,6 +125,7 @@ def head(p, title, meta, path, og_image, schema=None):
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{meta}">
 <meta name="twitter:image" content="{og_img_url}">
+<meta name="theme-color" content="#0A2126">
 <link rel="icon" href="{p}favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="{p}apple-touch-icon.png">
 <link rel="preload" href="{p}fonts/fraunces-v38-latin-600.woff2" as="font" type="font/woff2" crossorigin>
@@ -169,7 +170,7 @@ def footer(p):
 <div class="footer-grid">
 <div>
 <p class="footer-brand"><img src="{p}images/bubbles.png" alt="" width="30" height="30">{S.BRAND}</p>
-<p>Professional cleaning services across Islamabad &amp; Rawalpindi. Free on-site inspection, one fixed price, available 24/7.</p>
+<p>Professional cleaning services across Islamabad &amp; Rawalpindi. Fixed written quotes on WhatsApp, available 24/7.</p>
 <ul class="footer-contact" style="margin-top:16px">
 <li>{icon('phone', 16)}<a href="tel:{S.PHONE_TEL}">{S.PHONE_DISPLAY}</a></li>
 <li>{icon('wa', 16)}<a href="{WA_GENERIC_URL}" target="_blank" rel="noopener">WhatsApp us</a></li>
@@ -366,12 +367,12 @@ def build_home():
     html = head(p, title, meta, "", "images/og/default.jpg", schema)
     html += nav(p, "home")
     html += f"""<main id="main">
-<section class="hero">
+<section class="hero on-ink">
 <div class="wrap">
 <div>
 <p class="eyebrow">Islamabad &amp; Rawalpindi &middot; Open 24/7</p>
 <h1>Professional cleaning services in Islamabad &amp; Rawalpindi</h1>
-<p class="lead">Sofas, carpets, deep cleans, water tanks, solar panels and more &mdash; done properly by an equipped crew, quoted after a free inspection, never over the phone.</p>
+<p class="lead">Sofas, carpets, deep cleans, water tanks, solar panels and more &mdash; done properly by an equipped crew, quoted in writing on WhatsApp &mdash; the price we give is the price you pay.</p>
 <div class="cta-row">
 <a class="btn btn-wa" href="{WA_GENERIC_URL}" target="_blank" rel="noopener">{icon('wa')} WhatsApp {S.PHONE_DISPLAY}</a>
 <a class="btn btn-ghost" href="tel:{S.PHONE_TEL}">{icon('phone', 18)} Call us</a>
@@ -450,12 +451,12 @@ def build_services_index():
     html = head(p, title, meta, "services.html", "images/og/default.jpg", schema)
     html += nav(p, "services")
     html += f"""<main id="main">
-<section class="page-hero">
+<section class="page-hero on-ink">
 <div class="wrap">
 <div>
 <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Services</li></ol>
 <h1>Every cleaning service we offer</h1>
-<p class="lead">{len(SERVICES)} services, one standard: free inspection first, one fixed price, and a walkthrough before we leave.</p>
+<p class="lead">{len(SERVICES)} services, one standard: a fixed written quote on WhatsApp, one price, and a walkthrough before we leave.</p>
 <div class="cta-row">
 <a class="btn btn-wa" href="{WA_GENERIC_URL}" target="_blank" rel="noopener">{icon('wa')} Get a free quote</a>
 </div>
@@ -523,7 +524,7 @@ def build_service_page(slug):
     html = head(p, title, d["meta"], path, f"images/og/{slug}.jpg", schema)
     html += nav(p, "services")
     html += f"""<main id="main">
-<section class="page-hero">
+<section class="page-hero on-ink">
 <div class="wrap">
 <div>
 <ol class="crumbs">
@@ -553,7 +554,7 @@ def build_service_page(slug):
 <p>{d['included_intro']}</p>
 <ul class="checklist">{included}</ul>
 <div class="article-cta">
-<p>Want this done at your place? Send us the details on WhatsApp &mdash; free inspection, fixed quote.</p>
+<p>Want this done at your place? Send us the details on WhatsApp &mdash; fixed quote in minutes.</p>
 <a class="btn btn-wa" href="{wa_link_url}" target="_blank" rel="noopener">{icon('wa')} Get a free quote</a>
 </div>
 <h2>What this service does not include</h2>
@@ -578,7 +579,7 @@ def build_service_page(slug):
 <aside>
 <div class="aside-box on-ink">
 <h2>Get a fixed quote</h2>
-<p>Tell us your area and the size of the job. Free inspection first &mdash; the price we give is the price you pay.</p>
+<p>Send your area, the size of the job and a photo or two &mdash; you get one fixed price in writing.</p>
 <a class="btn btn-wa" href="{wa_link_url}" target="_blank" rel="noopener">{icon('wa')} WhatsApp us</a>
 <a class="btn btn-ghost" href="tel:{S.PHONE_TEL}">{icon('phone', 18)} Call now</a>
 <a class="aside-phone" href="tel:{S.PHONE_TEL}">{S.PHONE_DISPLAY}</a>
@@ -615,11 +616,11 @@ def build_about():
     ]}
     title = "About CleanCrew | Cleaning Company in Islamabad & Rawalpindi"
     meta = ("CleanCrew is a cleaning company serving Islamabad & Rawalpindi 24/7 — own "
-            "equipment, fixed quotes after a free inspection. WhatsApp 0330 2935777.")
+            "equipment, fixed written quotes on WhatsApp. 0330 2935777.")
     html = head(p, title, meta, "about.html", "images/og/default.jpg", schema)
     html += nav(p, "about")
     html += f"""<main id="main">
-<section class="page-hero">
+<section class="page-hero on-ink">
 <div class="wrap">
 <div>
 <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">About</li></ol>
@@ -640,7 +641,7 @@ def build_about():
 <h2>Who we are</h2>
 {body}
 <h2>How we work</h2>
-<p>Every job &mdash; from one office chair to a full post-construction handover &mdash; runs the same way: you message us, we inspect free of charge, you get one fixed price in writing, the crew arrives with everything it needs, and you walk through the finished work with the supervisor before we leave.</p>
+<p>Every job &mdash; from one office chair to a full post-construction handover &mdash; runs the same way: you message us, you send photos, you get one fixed price in writing on WhatsApp, the crew arrives with everything it needs, and you walk through the finished work with the supervisor before we leave.</p>
 <h2>What we will tell you honestly</h2>
 <p>If a stain will not come out fully, we say so before we start. If a job does not need the expensive service, we tell you the cheaper one is enough. And if something is outside what we do &mdash; plumbing, pest control, repairs &mdash; we say that too, instead of doing it badly.</p>
 </article>
@@ -684,11 +685,11 @@ def build_contact():
     ]}
     title = "Contact CleanCrew | WhatsApp 0330 2935777 | Islamabad & Rawalpindi"
     meta = ("Contact CleanCrew for cleaning in Islamabad and Rawalpindi. WhatsApp or "
-            "call 0330 2935777 — replies in minutes, free on-site inspection, open 24/7.")
+            "call 0330 2935777 — replies in minutes, fixed quotes on WhatsApp, open 24/7.")
     html = head(p, title, meta, "contact.html", "images/og/default.jpg", schema)
     html += nav(p, "contact")
     html += f"""<main id="main">
-<section class="page-hero">
+<section class="page-hero on-ink">
 <div class="wrap">
 <div>
 <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol>

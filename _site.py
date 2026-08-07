@@ -24,13 +24,13 @@ HOME_FEATURED = [
 ]
 
 # Trust microcopy shown under primary CTAs.
-CTA_TRUST = "Replies in minutes &middot; Free on-site inspection &middot; Fixed written quote"
+CTA_TRUST = "Replies in minutes &middot; Fixed quote on WhatsApp &middot; No hidden charges"
 
 # The CleanCrew promise — replaces fabricated testimonials with verifiable commitments.
 PROMISE = [
     ("A fixed written quote before we start",
-     "We look at the job first — free — and give you one number in writing. "
-     "That number does not change on the day."),
+     "You get one number on WhatsApp, in writing, before we arrive. It does "
+     "not change on the day unless the job differs from what you described."),
     ("A walkthrough before we leave",
      "You check the work with the supervisor room by room. Anything you flag "
      "gets redone on the spot, not argued about."),
@@ -41,11 +41,11 @@ PROMISE = [
 
 STEPS = [
     ("Message us on WhatsApp",
-     "Tell us the service, your area, and roughly how big the job is. Photos "
-     "help but aren't required. We reply within minutes, day or night."),
-    ("Free inspection, fixed quote",
-     "For most jobs we come and look first, free of charge, then give you one "
-     "fixed price in writing before any work starts."),
+     "Tell us the service, your area, and roughly how big the job is. A "
+     "couple of photos get you the most accurate price. We reply in minutes."),
+    ("Get a fixed price in writing",
+     "We quote right there on WhatsApp — one fixed number before any work "
+     "starts, not an estimate that grows on the day."),
     ("We clean — you check",
      "The team arrives with all machines and materials, works room by room, "
      "and walks you through the finished job before leaving."),

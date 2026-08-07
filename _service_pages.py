@@ -14,12 +14,12 @@ PAGES = {
         "title": "Deep Cleaning Services in Islamabad & Rawalpindi | House & Office Deep Cleaning",
         "meta": ("Professional deep cleaning services in Islamabad and Rawalpindi. "
                  "House and office deep cleaning in DHA, Bahria Town, F & G sectors, "
-                 "Saddar and Chaklala. Free inspection, fixed price, available 24/7. "
+                 "Saddar and Chaklala. Fixed written quote on WhatsApp, available 24/7. "
                  "WhatsApp 0330 2935777."),
         "hero_p": ("A full top-to-bottom clean of your house, apartment or office — "
                    "kitchens, bathrooms, floors, fittings and all the build-up that "
-                   "everyday cleaning never reaches. Free inspection first, then one "
-                   "fixed price."),
+                   "everyday cleaning never reaches. Message us with photos and get one "
+                   "fixed price in writing first."),
         "h2_intro": "What deep cleaning actually means",
         "h2_included": "What is included in a deep clean",
         "included_intro": ("Every deep clean we quote covers the following as standard. If "
@@ -84,11 +84,11 @@ PAGES = {
             ("You tell us the job",
              "Send a WhatsApp or call with the property size in marla or square feet, "
              "how many bedrooms and bathrooms, the area you are in, and roughly when you "
-             "need it done. Photos help but are not essential."),
-            ("We inspect and quote",
-             "For most properties we visit and look at the actual condition before "
-             "quoting. That visit is free and there is no obligation. You get one fixed "
-             "price covering everything discussed — not an hourly rate that grows."),
+             "need it done. A few photos of the rooms help us price it accurately."),
+            ("You get a fixed price on WhatsApp",
+             "We may ask a question or two about the photos, then send one fixed price "
+             "in writing on WhatsApp before any work starts. That price does not change "
+             "on the day unless the job differs from what you described."),
             ("We clean, room by room",
              "The team arrives with all machines, chemicals and materials. We work "
              "systematically from the top of each room downwards and finish each room "
@@ -116,8 +116,8 @@ PAGES = {
         "faqs": [
             ("How much does deep cleaning cost in Islamabad?",
              "It depends on the size and condition of the property, so we do not publish a "
-             "fixed price list. What we do is come and look at the property free of charge, "
-             "then give you one fixed price before any work starts. As a guide, the things "
+             "fixed price list. What we do is quote from the details and photos you send "
+             "on WhatsApp — one fixed price in writing before any work starts. The things "
              "that move the price most are total area in marla, how many kitchens and "
              "bathrooms there are, and whether the property has been maintained or is "
              "coming out of a long period without a proper clean."),
@@ -152,8 +152,10 @@ PAGES = {
              "Yes. We deep clean offices, clinics, salons, restaurants and retail units "
              "across both cities. Commercial deep cleans are usually scheduled outside "
              "working hours — evenings, nights or weekends — so your business does not have "
-             "to close. If you need regular ongoing cleaning rather than a one-off deep "
-             "clean, ask us about janitorial contracts."),
+             "to close. For large offices and commercial sites we can arrange a site "
+             "visit first if photos are not enough to quote from. If you need regular "
+             "ongoing cleaning rather than a one-off deep clean, ask us about janitorial "
+             "contracts."),
             ("What is the difference between deep cleaning and post-construction cleaning?",
              "A deep clean assumes the property is finished and lived in, and targets "
              "accumulated dirt and grease. Post-construction cleaning deals with a "
@@ -170,8 +172,9 @@ PAGES = {
         "closing_h2": "Book a deep clean in Islamabad or Rawalpindi",
         "closing": [
             "Send us a WhatsApp message with your area, the size of the property and when "
-            "you need it done. We will arrange a free inspection, give you one fixed price, "
-            "and book a time that works around you — including evenings and weekends.",
+            "you need it done. We will ask anything we need to know, send one fixed price "
+            "in writing, and book a time that works around you — including evenings and "
+            "weekends.",
             "We answer messages 24 hours a day, and in most cases you will hear back within "
             "minutes.",
         ],
