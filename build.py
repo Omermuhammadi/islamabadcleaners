@@ -85,6 +85,8 @@ def icon(name, size=20):
         "cal": '<path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14zM5 8V6h14v2zm4 5.5 1.4 3 3.3.4-2.4 2.2.6 3.2L9 16.8z"/>',
         "chev": '<path d="M9.2 18.6 7.8 17.2l5.2-5.2-5.2-5.2 1.4-1.4 6.6 6.6z"/>',
         "timer": '<path d="M12 4a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 16a7 7 0 1 1 7-7 7 7 0 0 1-7 7zm1-11.5h-2V14l4.4 2.6 1-1.7-3.4-2zM9 1h6v2H9z"/>',
+        "doc": '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 7V3.5L18.5 9zM8 13h8v2H8zm0 4h5v2H8z"/>',
+        "sparkle": '<path d="m12 2 1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9zM19.5 14.5l1 2.9 2.9 1-2.9 1-1 2.9-1-2.9-2.9-1 2.9-1zM5 15.5l.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9z"/>',
     }
     return (f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="currentColor" '
             f'aria-hidden="true">{paths[name]}</svg>')
@@ -409,7 +411,14 @@ def why_us_section():
 def build_home():
     featured = [BY_SLUG[slug] for slug in S.HOME_FEATURED]
     cards = "\n".join(service_card(s) for s in featured)
-    steps = "\n".join(f"<li><h3>{t}</h3><p>{d}</p></li>" for t, d in S.STEPS)
+    step_icons = ["wa", "doc", "sparkle"]
+    steps = "\n".join(
+        f"""<li class="step-card">
+<div class="step-top"><span class="step-ic">{icon(ic, 26)}</span><span class="step-num" aria-hidden="true">0{i}</span></div>
+<h3>{t}</h3>
+<p>{d}</p>
+</li>"""
+        for i, ((t, d), ic) in enumerate(zip(S.STEPS, step_icons), start=1))
     faqs_html = "\n".join(
         f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in C.FAQS)
 
@@ -465,11 +474,16 @@ def build_home():
 
 <section class="section">
 <div class="wrap">
-<div class="section-head">
+<div class="section-head head-center">
 <p class="eyebrow">How it works</p>
 <h2>From message to spotless in three steps</h2>
+<p>No site visits, no forms, no haggling on the day &mdash; the whole thing runs on WhatsApp.</p>
 </div>
 <ol class="steps">{steps}</ol>
+<div class="steps-cta">
+<a class="btn btn-wa" href="{WA_GENERIC_URL}" target="_blank" rel="noopener">{icon('wa')} Start with step 1 &mdash; message us</a>
+<p class="cta-trust">{S.CTA_TRUST}</p>
+</div>
 </div>
 </section>
 
