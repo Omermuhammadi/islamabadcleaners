@@ -395,7 +395,7 @@ def why_us_section():
 <div class="whyus-col whyus-l">{left}</div>
 <div class="whyus-center">
 <div class="whyus-circle">
-<img src="/images/about-team.webp" alt="IslamabadCleaners crew cleaning a home in Islamabad" width="720" height="720" loading="lazy" decoding="async">
+<img src="/images/about-team.webp" alt="The IslamabadCleaners crew in uniform" width="900" height="1125" loading="lazy" decoding="async">
 <p class="whyus-brand">Islamabad<span>Cleaners</span></p>
 </div>
 </div>
@@ -537,7 +537,7 @@ def build_services_index():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="/images/about-team.webp" alt="IslamabadCleaners professional cleaning team at work" width="720" height="720" loading="lazy" decoding="async">
+<img src="/images/services-page.webp" alt="IslamabadCleaners technician deep-cleaning a sofa with an extraction machine" width="900" height="1125" loading="lazy" decoding="async">
 </figure>
 </div>
 </section>
@@ -704,7 +704,7 @@ def build_about():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="/images/about-team.webp" alt="IslamabadCleaners cleaning team with professional equipment" width="720" height="720" fetchpriority="high" decoding="async">
+<img src="/images/about-team.webp" alt="The IslamabadCleaners team in uniform with their cleaning equipment" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>
@@ -773,7 +773,7 @@ def build_contact():
 <p class="cta-trust">{S.CTA_TRUST}</p>
 </div>
 <figure class="arch">
-<img src="/images/hero-home.webp" alt="IslamabadCleaners technician cleaning a sofa" width="900" height="1125" fetchpriority="high" decoding="async">
+<img src="/images/hero-home.webp" alt="IslamabadCleaners team member holding up a phone with the IslamabadCleaners logo" width="900" height="1125" fetchpriority="high" decoding="async">
 </figure>
 </div>
 </section>

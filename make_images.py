@@ -4,10 +4,12 @@ Outputs per service slug:
   docs/images/services/{slug}-card.webp   640x427  (3:2)
   docs/images/services/{slug}-hero.webp   720x720  (1:1)
   docs/images/og/{slug}.jpg               1200x630 JPEG (social previews)
-Plus:
-  docs/images/hero-home.webp              900x1125 (4:5 arch)
-  docs/images/about-team.webp             720x720
-  docs/images/og/default.jpg              1200x630 from hero-home
+Plus the four page heroes (AI-generated brand set, all sources 4:5):
+  docs/images/hero-crew.webp              900x1125  homepage   <- "landing page hero new.png"
+  docs/images/about-team.webp             900x1125  about      <- "about page new.png"
+  docs/images/services-page.webp          900x1125  services   <- "service page new.png"
+  docs/images/hero-home.webp              900x1125  contact    <- "contact page new.png"
+  docs/images/og/default.jpg              1200x630  from the homepage hero
   docs/images/CREDITS.txt                 copied from raw-images/credits.txt
 
 Usage: python make_images.py
@@ -89,6 +91,23 @@ def load(path):
     return im
 
 
+def erase_screen_button(im):
+    """Paint out the garbled AI-generated button on the contact source's
+    phone screen (coords fixed to the 1856x2304 "contact page new.png").
+    The screen around it is uniform white, so a flat fill sampled from the
+    screen is invisible."""
+    if im.size != (1856, 2304):
+        return
+    px = im.load()
+    # sample clean screen white just below the button
+    box = im.crop((580, 1088, 620, 1100))
+    n = (box.width * box.height)
+    fill = tuple(sum(ch) // n for ch in zip(*list(box.getdata())))
+    for y in range(1041, 1084):
+        for x in range(543, 666):
+            px[x, y] = fill
+
+
 def main():
     os.makedirs(OUT_SVC, exist_ok=True)
     os.makedirs(OUT_OG, exist_ok=True)
@@ -109,33 +128,40 @@ def main():
         save_capped(cover(im, 1200, 630), os.path.join(OUT_OG, f"{slug}.jpg"), "JPEG", QUALITY_JPG, 80)
         print(f"ok  {slug}")
 
-    hero = first_existing(
-        os.path.join(ROOT, "hero-home.jpg"),
-        os.path.join(RAW, "hero-home.jpg"),
+    landing = first_existing(
+        os.path.join(ROOT, "landing page hero new.png"),
+        os.path.join(RAW, "landing page hero new.png"),
     )
-    if hero:
-        im = load(hero)
-        save_capped(cover(im, 900, 1125, fx=0.74), os.path.join(OUT_IMG, "hero-home.webp"), "WEBP", QUALITY_WEBP)
+    if landing:
+        im = load(landing)
+        save_capped(cover(im, 900, 1125), os.path.join(OUT_IMG, "hero-crew.webp"), "WEBP", QUALITY_WEBP)
+        # social preview: crop the wide band around the crew's faces
+        save_capped(cover(im, 1200, 630, fy=0.35), os.path.join(OUT_OG, "default.jpg"), "JPEG", QUALITY_JPG, OG_MAX_KB)
 
     team = first_existing(
-        os.path.join(ROOT, "about-team.jpg"),
-        os.path.join(RAW, "about-team.jpg"),
+        os.path.join(ROOT, "about page new.png"),
+        os.path.join(RAW, "about page new.png"),
     )
     if team:
         im = load(team)
-        save_capped(cover(im, 720, 720), os.path.join(OUT_IMG, "about-team.webp"), "WEBP", QUALITY_WEBP)
+        save_capped(cover(im, 900, 1125), os.path.join(OUT_IMG, "about-team.webp"), "WEBP", QUALITY_WEBP)
 
-    action = first_existing(
-        os.path.join(ROOT, "herov2.webp"),
-        os.path.join(ROOT, "hero.png"),
-        os.path.join(ROOT, "hero.jpg"),
-        os.path.join(RAW, "hero-action.jpg"),
+    svc_page = first_existing(
+        os.path.join(ROOT, "service page new.png"),
+        os.path.join(RAW, "service page new.png"),
     )
-    if action:
-        im = load(action)
-        # homepage hero: 4:5 crop centred on the cleaner vacuuming
-        save_capped(cover(im, 900, 1125, fx=0.30), os.path.join(OUT_IMG, "hero-crew.webp"), "WEBP", QUALITY_WEBP)
-        save_capped(cover(im, 1200, 630), os.path.join(OUT_OG, "default.jpg"), "JPEG", QUALITY_JPG, OG_MAX_KB)
+    if svc_page:
+        im = load(svc_page)
+        save_capped(cover(im, 900, 1125), os.path.join(OUT_IMG, "services-page.webp"), "WEBP", QUALITY_WEBP)
+
+    contact = first_existing(
+        os.path.join(ROOT, "contact page new.png"),
+        os.path.join(RAW, "contact page new.png"),
+    )
+    if contact:
+        im = load(contact)
+        erase_screen_button(im)
+        save_capped(cover(im, 900, 1125), os.path.join(OUT_IMG, "hero-home.webp"), "WEBP", QUALITY_WEBP)
 
     credits = os.path.join(RAW, "credits.txt")
     if os.path.exists(credits):
