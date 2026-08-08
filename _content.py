@@ -61,6 +61,36 @@ ALL_SERVICES = [
     "Tile Cleaning", "Floor Care", "Solar Panel Cleaning",
 ]
 
+# --- Why choose us (homepage radial section) --------------------------------
+# (title, blurb, icon key). First 3 render left of the circle, next 3 right,
+# last 2 below it.
+WHY_US = [
+    ("Certified Professional Cleaners",
+     "A trained, supervised crew with proper machines &mdash; the same standard "
+     "on every job, not whoever was free that day.", "user"),
+    ("Environmentally Friendly Cleaning",
+     "Professional products that are safe for children and pets, and we "
+     "ventilate as we work.", "leaf"),
+    ("100% Satisfaction Guaranteed",
+     "You walk through the finished job with the supervisor. Anything you "
+     "flag is redone on the spot.", "award"),
+    ("One-Stop Convenience",
+     "Sofas to solar panels, water tanks to full handovers &mdash; one number "
+     "for every cleaning job in the twin cities.", "thumb"),
+    ("Police-Checked Professionals",
+     "Known, vetted staff who work under a named supervisor on every "
+     "visit &mdash; never strangers at your door.", "shield"),
+    ("24/7 Customer Support",
+     "WhatsApp or call at any hour &mdash; a person replies in minutes, day "
+     "or night.", "headset"),
+    ("Available Evenings & Weekends",
+     "Open 24 hours, 7 days. Overnight office jobs and weekend slots are "
+     "routine for us.", "cal"),
+    ("Book In 60 Seconds",
+     "One WhatsApp message books the job. Send photos and you get a fixed "
+     "written price in minutes.", "timer"),
+]
+
 # --- Why us -----------------------------------------------------------------
 FEATURES = [
     ("Available 24/7",
@@ -143,6 +173,12 @@ TESTIMONIALS = [
     ("Usman T.", "Chaklala, Rawalpindi",
      "Used them for our office. They come regularly now. Reliable, and the "
      "supervisor actually checks the work."),
+    ("Ayesha S.", "F-10, Islamabad",
+     "Very professional team. They cleaned the whole house in one visit and "
+     "the price was exactly what they quoted on WhatsApp."),
+    ("Basit A.", "G-9, Islamabad",
+     "Quick reply on WhatsApp and the team came the same day. Sofa cleaning "
+     "was done in two hours. Highly recommended."),
 ]
 
 STATS = [

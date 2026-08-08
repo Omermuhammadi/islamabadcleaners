@@ -77,6 +77,14 @@ def icon(name, size=20):
         "mail": '<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>',
         "shield": '<path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3zm-1 14-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/>',
         "star": '<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2z"/>',
+        "user": '<path d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12zm0 2.2c-3.6 0-8 1.8-8 5.3V21h16v-1.5c0-3.5-4.4-5.3-8-5.3z"/>',
+        "leaf": '<path d="M20.6 3.4C13 3.4 5.8 6.4 5.8 13.6a7 7 0 0 0 .5 2.6 22 22 0 0 0-2.7 4.4l1.8.8a20 20 0 0 1 2.3-3.8 6.6 6.6 0 0 0 3.9 1.2c7.2 0 9-8.4 9-15.4zm-9 13.4a4.7 4.7 0 0 1-2.6-.8 20.6 20.6 0 0 1 6.5-5.5 22.7 22.7 0 0 0-7.8 4.3 5.1 5.1 0 0 1-.1-1.2c0-5.4 5.2-7.9 10.9-8.2-.3 5.6-1.7 11.4-6.9 11.4z"/>',
+        "award": '<path d="M12 2a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm0 11.5A4.5 4.5 0 1 1 16.5 9 4.5 4.5 0 0 1 12 13.5zm-3.8 2.6L6 22l6-2.6L18 22l-2.2-5.9a8.9 8.9 0 0 1-7.6 0z"/>',
+        "thumb": '<path d="M2 20h3.2V9.6H2zm20-9.4a1.9 1.9 0 0 0-1.9-1.9h-5.1l.9-4.2v-.3a1.4 1.4 0 0 0-.4-1l-1-1-6.3 6.3a1.9 1.9 0 0 0-.6 1.4v8.2a1.9 1.9 0 0 0 1.9 1.9h7.7a1.9 1.9 0 0 0 1.8-1.2l2.9-6.7a1.9 1.9 0 0 0 .1-.7z"/>',
+        "headset": '<path d="M12 2a9 9 0 0 0-9 9v7a3 3 0 0 0 3 3h3v-8H5v-2a7 7 0 0 1 14 0v2h-4v8h3a3 3 0 0 0 3-3v-7a9 9 0 0 0-9-9z"/>',
+        "cal": '<path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14zM5 8V6h14v2zm4 5.5 1.4 3 3.3.4-2.4 2.2.6 3.2L9 16.8z"/>',
+        "chev": '<path d="M9.2 18.6 7.8 17.2l5.2-5.2-5.2-5.2 1.4-1.4 6.6 6.6z"/>',
+        "timer": '<path d="M12 4a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 16a7 7 0 1 1 7-7 7 7 0 0 1-7 7zm1-11.5h-2V14l4.4 2.6 1-1.7-3.4-2zM9 1h6v2H9z"/>',
     }
     return (f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="currentColor" '
             f'aria-hidden="true">{paths[name]}</svg>')
@@ -320,39 +328,78 @@ def cta_band(h2, para, wa_link_url):
 """
 
 
+SLIDER_JS = """<script>
+(function () {
+  var track = document.querySelector('.slider-track');
+  if (!track) return;
+  var btns = document.querySelectorAll('.slider-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      var card = track.querySelector('.review-card');
+      var gap = 16;
+      var step = card ? card.offsetWidth + gap : 320;
+      track.scrollBy({ left: step * Number(this.getAttribute('data-dir')), behavior: 'smooth' });
+    });
+  }
+})();
+</script>"""
+
+
 def reviews_section():
-    stars = "".join(icon("star", 16) for _ in range(5))
+    stars = "".join(icon("star", 17) for _ in range(5))
     cards = "\n".join(
         f"""<div class="review-card">
+<p class="review-name">{name}</p>
+<p class="review-area">{area}</p>
 <p class="stars" aria-label="5 out of 5 stars">{stars}</p>
 <p class="review-text">&ldquo;{text}&rdquo;</p>
-<p class="review-who">{name} &middot; {area}</p>
 </div>"""
         for name, area, text in C.TESTIMONIALS)
-    return f"""<section class="section">
+    return f"""<section class="section section-mist">
 <div class="wrap">
-<div class="section-head">
+<div class="section-head head-center">
 <p class="eyebrow">What customers say</p>
-<h2>Word travels fast in the twin cities</h2>
+<h2>Client testimonials</h2>
+<p>Word travels fast in the twin cities</p>
 </div>
-<div class="review-grid">{cards}</div>
+<div class="slider">
+<button class="slider-btn" type="button" data-dir="-1" aria-label="Previous reviews">{icon('chev', 22)}</button>
+<div class="slider-track" tabindex="0" aria-label="Customer reviews">{cards}</div>
+<button class="slider-btn" type="button" data-dir="1" aria-label="Next reviews">{icon('chev', 22)}</button>
 </div>
+</div>
+{SLIDER_JS}
 </section>
 """
 
 
-def promise_section():
-    icons = ["shield", "check", "wa"]
-    cards = "\n".join(
-        f"""<div class="promise-card">{icon(icons[i], 26)}<h3>{t}</h3><p>{d}</p></div>"""
-        for i, (t, d) in enumerate(S.PROMISE))
-    return f"""<section class="section section-mist">
+def why_us_section():
+    def item(entry, cls):
+        title, desc, ic = entry
+        return (f'<div class="whyus-item {cls}">'
+                f'<span class="whyus-ic">{icon(ic, 30)}</span>'
+                f'<div class="whyus-txt"><h3>{title}</h3><p>{desc}</p></div></div>')
+    left = "\n".join(item(e, "w-left") for e in C.WHY_US[:3])
+    right = "\n".join(item(e, "w-right") for e in C.WHY_US[3:6])
+    bottom = "\n".join(item(e, "w-mid") for e in C.WHY_US[6:])
+    return f"""<section class="section">
 <div class="wrap">
-<div class="section-head">
-<p class="eyebrow">The IslamabadCleaners promise</p>
-<h2>No scripts, no surprises</h2>
+<div class="section-head head-center">
+<p class="eyebrow">Why choose us</p>
+<h2>One team, many solutions</h2>
+<p>Everything a professional clean should come with &mdash; on every job, not just the big ones.</p>
 </div>
-<div class="promise-grid">{cards}</div>
+<div class="whyus-grid">
+<div class="whyus-col whyus-l">{left}</div>
+<div class="whyus-center">
+<div class="whyus-circle">
+<img src="/images/about-team.webp" alt="IslamabadCleaners crew cleaning a home in Islamabad" width="720" height="720" loading="lazy" decoding="async">
+<p class="whyus-brand">Islamabad<span>Cleaners</span></p>
+</div>
+</div>
+<div class="whyus-col whyus-r">{right}</div>
+<div class="whyus-bottom">{bottom}</div>
+</div>
 </div>
 </section>
 """
@@ -426,7 +473,7 @@ def build_home():
 </div>
 </section>
 
-{promise_section()}
+{why_us_section()}
 
 {reviews_section()}
 
