@@ -120,7 +120,7 @@ def out_file(path=""):
     return f"{path}/index.html" if path else "index.html"
 
 
-GTM_ID = "GTM-KR99KFC5"
+GTM_ID = "GTM-K82QRT2W"
 
 GTM_HEAD = """<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
