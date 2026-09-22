@@ -120,6 +120,16 @@ def out_file(path=""):
     return f"{path}/index.html" if path else "index.html"
 
 
+GOOGLE_TAG_HEAD = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18389450220"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18389450220');
+</script>"""
+
 GTM_ID = "GTM-K82QRT2W"
 
 GTM_HEAD = """<!-- Google Tag Manager -->
@@ -148,6 +158,7 @@ def head(title, meta, path, og_image, schema=None):
     return f"""<!DOCTYPE html>
 <html lang="en-PK">
 <head>
+{GOOGLE_TAG_HEAD}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {GTM_HEAD}
