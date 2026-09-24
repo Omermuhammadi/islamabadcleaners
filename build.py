@@ -131,7 +131,7 @@ GOOGLE_TAG_HEAD = """<!-- Google tag (gtag.js) -->
 </script>"""
 
 CONVERSION_WA = "AW-18389450220/7PJ2CMfCmuscEOz74sBE"
-CONVERSION_PHONE = ""  # Set phone conversion label when created (e.g. 'AW-18389450220/...')
+CONVERSION_PHONE = "AW-18389450220/ooSdCJ6-mescEOz74sBE"
 
 CLICK_TRACKING_JS = f"""<script>
 (function () {{
