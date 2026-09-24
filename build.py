@@ -128,10 +128,31 @@ GOOGLE_TAG_HEAD = """<!-- Google tag (gtag.js) -->
   gtag('js', new Date());
 
   gtag('config', 'AW-18389450220');
-</script>
-<!-- Event snippet for WhatsApp Click conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-18389450220/7PJ2CMfCmuscEOz74sBE'});
+</script>"""
+
+CONVERSION_WA = "AW-18389450220/7PJ2CMfCmuscEOz74sBE"
+CONVERSION_PHONE = ""  # Set phone conversion label when created (e.g. 'AW-18389450220/...')
+
+CLICK_TRACKING_JS = f"""<script>
+(function () {{
+  var waConversion = '{CONVERSION_WA}';
+  var phoneConversion = '{CONVERSION_PHONE}';
+
+  document.addEventListener('click', function (e) {{
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {{
+      if (typeof gtag === 'function' && waConversion) {{
+        gtag('event', 'conversion', {{ 'send_to': waConversion }});
+      }}
+    }} else if (href.indexOf('tel:') === 0) {{
+      if (typeof gtag === 'function' && phoneConversion) {{
+        gtag('event', 'conversion', {{ 'send_to': phoneConversion }});
+      }}
+    }}
+  }}, true);
+}})();
 </script>"""
 
 GTM_ID = "GTM-K82QRT2W"
@@ -265,7 +286,7 @@ def float_ctas(wa_link_url):
 
 
 def close(wa_link_url):
-    return float_ctas(wa_link_url) + NAV_JS + "\n</body>\n</html>\n"
+    return float_ctas(wa_link_url) + NAV_JS + CLICK_TRACKING_JS + "\n</body>\n</html>\n"
 
 
 # ------------------------------------------------------------- schema ------

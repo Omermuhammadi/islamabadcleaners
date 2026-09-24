@@ -10,10 +10,6 @@
 
   gtag('config', 'AW-18389450220');
 </script>
-<!-- Event snippet for WhatsApp Click conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-18389450220/7PJ2CMfCmuscEOz74sBE'});
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google Tag Manager -->
@@ -298,6 +294,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var open = l.classList.toggle('open');
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+})();
+</script><script>
+(function () {
+  var waConversion = 'AW-18389450220/7PJ2CMfCmuscEOz74sBE';
+  var phoneConversion = '';
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
+      if (typeof gtag === 'function' && waConversion) {
+        gtag('event', 'conversion', { 'send_to': waConversion });
+      }
+    } else if (href.indexOf('tel:') === 0) {
+      if (typeof gtag === 'function' && phoneConversion) {
+        gtag('event', 'conversion', { 'send_to': phoneConversion });
+      }
+    }
+  }, true);
 })();
 </script>
 </body>
