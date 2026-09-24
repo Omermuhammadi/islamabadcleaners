@@ -128,6 +128,10 @@ GOOGLE_TAG_HEAD = """<!-- Google tag (gtag.js) -->
   gtag('js', new Date());
 
   gtag('config', 'AW-18389450220');
+</script>
+<!-- Event snippet for WhatsApp Click conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-18389450220/7PJ2CMfCmuscEOz74sBE'});
 </script>"""
 
 GTM_ID = "GTM-K82QRT2W"
